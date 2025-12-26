@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Invoices - AutoFix Garage</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1c2127",
+                        "text-secondary": "#9dabb9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b4754;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col overflow-x-hidden transition-colors duration-200">
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-[#283039] bg-white dark:bg-[#111418]">
+<div class="px-4 md:px-8 lg:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-8 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">garage_home</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">AutoFix Garage</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">Dashboard</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">My Vehicles</a>
+<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary py-1" href="#">Invoices</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4 md:gap-6">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-gray-100 dark:hover:bg-[#283039] transition-colors relative">
+<span class="material-symbols-outlined text-gray-600 dark:text-white text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-[#111418]"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-[#283039]">
+<div class="hidden lg:flex flex-col items-end">
+<span class="text-sm font-bold leading-none">Alex Morgan</span>
+<span class="text-xs text-primary font-medium mt-1">Premium Member</span>
+</div>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-gray-100 dark:ring-[#283039]" data-alt="User profile picture of a man smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2CQDFb4LVNA78dLDm8Jbz3Loo5b0uWegy-4rLkh0AVSUpMz9gzoerGPy2LFiOHfhqvOtVZ5cGPQLw-l3IJYU6EW4JQcrKIHK_Nq0KjlSZvsvLd2sSRYlk-vdtV9Y37E0GTj6ENRe4viAEcKr4cm4-_9NlRPCiW0Y8LXeDuXFKIcfFe--lvNcCCiiV-1gIEJK7AfOaaRAXlliRs88QPbgaK8ulnyN2lydH47y0IaQ529SmeBoYiY4frOj59bb7LvhhRAmGTlHxISs");'>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex justify-center w-full px-4 md:px-8 py-8">
+<div class="w-full max-w-[1280px] flex flex-col gap-8">
+<div class="flex flex-col md:flex-row gap-4 justify-between items-start md:items-end">
+<div>
+<h1 class="text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Invoices</h1>
+<p class="text-text-secondary text-base font-normal mt-2">View and manage your service payments and history.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center gap-2 bg-white dark:bg-[#283039] hover:bg-gray-50 dark:hover:bg-[#3b4754] text-gray-700 dark:text-white border border-gray-200 dark:border-[#3b4754] font-bold py-2 px-4 rounded-lg transition-all text-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Export All
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl border border-gray-200 dark:border-[#283039] shadow-sm flex items-center gap-4">
+<div class="size-12 rounded-full bg-blue-100 dark:bg-blue-900/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div>
+<p class="text-sm text-text-secondary font-medium">Total Spent (YTD)</p>
+<h3 class="text-2xl font-black text-gray-900 dark:text-white">$2,845.00</h3>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl border border-gray-200 dark:border-[#283039] shadow-sm flex items-center gap-4">
+<div class="size-12 rounded-full bg-amber-100 dark:bg-amber-900/20 text-amber-600 dark:text-amber-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
+</div>
+<div>
+<p class="text-sm text-text-secondary font-medium">Upcoming Payments</p>
+<h3 class="text-2xl font-black text-gray-900 dark:text-white">$120.00</h3>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-xl border border-gray-200 dark:border-[#283039] shadow-sm flex items-center gap-4">
+<div class="size-12 rounded-full bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">event_available</span>
+</div>
+<div>
+<p class="text-sm text-text-secondary font-medium">Last Payment</p>
+<h3 class="text-2xl font-black text-gray-900 dark:text-white">Oct 24, 2023</h3>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] flex flex-col">
+<div class="p-4 border-b border-gray-200 dark:border-[#283039] flex flex-col md:flex-row gap-4 justify-between">
+<div class="flex items-center bg-gray-100 dark:bg-[#111418] rounded-lg px-3 py-2 w-full md:w-80 border border-transparent focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-gray-500 text-[20px]">search</span>
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 text-gray-700 dark:text-white placeholder-gray-500 ml-2" placeholder="Search by Invoice #, Service..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-2">
+<div class="relative group">
+<button class="flex items-center gap-2 bg-white dark:bg-[#283039] hover:bg-gray-50 dark:hover:bg-[#3b4754] border border-gray-200 dark:border-[#3b4754] text-xs font-bold py-2 px-3 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+                            Filter by Status
+                            <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 bg-white dark:bg-[#283039] hover:bg-gray-50 dark:hover:bg-[#3b4754] border border-gray-200 dark:border-[#3b4754] text-xs font-bold py-2 px-3 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">directions_car</span>
+                            Vehicle
+                            <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 bg-white dark:bg-[#283039] hover:bg-gray-50 dark:hover:bg-[#3b4754] border border-gray-200 dark:border-[#3b4754] text-xs font-bold py-2 px-3 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">sort</span>
+                            Newest First
+                        </button>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50/50 dark:bg-[#161b22] border-b border-gray-200 dark:border-[#283039]">
+<th class="py-4 px-6 text-xs font-bold uppercase text-text-secondary tracking-wider">Invoice</th>
+<th class="py-4 px-6 text-xs font-bold uppercase text-text-secondary tracking-wider">Date</th>
+<th class="py-4 px-6 text-xs font-bold uppercase text-text-secondary tracking-wider">Vehicle</th>
+<th class="py-4 px-6 text-xs font-bold uppercase text-text-secondary tracking-wider">Service</th>
+<th class="py-4 px-6 text-xs font-bold uppercase text-text-secondary tracking-wider">Amount</th>
+<th class="py-4 px-6 text-xs font-bold uppercase text-text-secondary tracking-wider">Status</th>
+<th class="py-4 px-6 text-xs font-bold uppercase text-text-secondary tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-[#283039]">
+<tr class="hover:bg-gray-50 dark:hover:bg-[#283039]/50 transition-colors group">
+<td class="py-4 px-6">
+<span class="font-bold text-sm text-primary">#INV-4821</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-medium">Oct 24, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-gray-100 dark:bg-[#283039] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCg4rIx4YQQyqPAHXTUa_ORJ_cOS4595D6aWuXG2emAkQugCYvdSS0vwZK34eWfa-CAV6-S_e2sxe-KQH1wDVk-V8Blsz_FQxsN5f2f0nwUxj-UV4ehm5Mjnd3_BJpukmC2rVMTi7KeB_LG5DMVHIP-XTCa5vgGfx8CSM1hX2M5L3yGJHIIFSjz8eG0Q5wnHEliLfG9PQV57a-_Jo4tT5Z_zeAfE8v5P5QNj6Fufu6KVIuBX7enpvJhH8Br6zhpsUfBY_Qbmv34Uf4");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">2020 Honda CR-V</span>
+<span class="text-[10px] text-text-secondary">XYZ-9876</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm">Synthetic Oil Change</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-bold">$65.00</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800">
+                                    Paid
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="Download PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-[#283039]/50 transition-colors group">
+<td class="py-4 px-6">
+<span class="font-bold text-sm text-primary">#INV-4755</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-medium">Aug 10, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-gray-100 dark:bg-[#283039] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNN9mdRP5DbtNqp-TDSy6vKO66T3kuFwYnbz2BeGwV_wVCEMyUbYgg-TBzFZjmmtjo-OrckjkG6j6ktJyorGYaqR8bGTDjXKp4_BMlkXSz-xqr7geQXdDmnROB8zY9qzq8rszNfLB7lHpn23jOEq0pC9qBFNthh4adrU9cbKCcOmuJ4JGK4_zl2AKvh86RKCfMWlAg5v9znSmfU3lN2OagDMHNkeO46JvPL_0FyYyurho6oegraf7gsQw1LDEeBuZOV-pLCDiFtT0");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">2018 Ford Mustang</span>
+<span class="text-[10px] text-text-secondary">ABC-1234</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm">Brake Pad Replacement</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-bold">$320.00</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800">
+                                    Paid
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="Download PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-[#283039]/50 transition-colors group">
+<td class="py-4 px-6">
+<span class="font-bold text-sm text-primary">#INV-4620</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-medium">Jun 15, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-gray-100 dark:bg-[#283039] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCg4rIx4YQQyqPAHXTUa_ORJ_cOS4595D6aWuXG2emAkQugCYvdSS0vwZK34eWfa-CAV6-S_e2sxe-KQH1wDVk-V8Blsz_FQxsN5f2f0nwUxj-UV4ehm5Mjnd3_BJpukmC2rVMTi7KeB_LG5DMVHIP-XTCa5vgGfx8CSM1hX2M5L3yGJHIIFSjz8eG0Q5wnHEliLfG9PQV57a-_Jo4tT5Z_zeAfE8v5P5QNj6Fufu6KVIuBX7enpvJhH8Br6zhpsUfBY_Qbmv34Uf4");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">2020 Honda CR-V</span>
+<span class="text-[10px] text-text-secondary">XYZ-9876</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm">Tire Rotation &amp; Balance</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-bold">$45.00</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800">
+                                    Paid
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="Download PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-[#283039]/50 transition-colors group">
+<td class="py-4 px-6">
+<span class="font-bold text-sm text-primary">#INV-4102</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-medium">Feb 02, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-gray-100 dark:bg-[#283039] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYvyl-OwgKr_U5AiItl-6CFN0W1T2IWobquqJ_by17xeU6nxkALHcd4SXSsEAV-tfXNo86HLDh4YPxj_nnCOYwmPnDnKqKSwCNrLnTbat5YCRfAahrg3TB0CP09gzCVPe8V3aluIRaaaosIYtx6DwOl0UMBbefHxw8pcUna-rIR-hlkMMwrwACGhvKS3wltwEa5v-f5AmgVFlumsMMpio82hjnHuWBW2Skij6OCLOwzNnKCIyUToN81qPp81YVsGZGJHLLKxDh-BQ");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">2015 Mazda MX-5</span>
+<span class="text-[10px] text-text-secondary">MIA-5555</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm">Annual Inspection</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-bold">$110.00</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800">
+                                    Paid
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="Download PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-[#283039]/50 transition-colors group bg-blue-50/50 dark:bg-blue-900/10">
+<td class="py-4 px-6">
+<span class="font-bold text-sm text-primary">#EST-4901</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-medium">Oct 29, 2023</span>
+</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-gray-100 dark:bg-[#283039] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNN9mdRP5DbtNqp-TDSy6vKO66T3kuFwYnbz2BeGwV_wVCEMyUbYgg-TBzFZjmmtjo-OrckjkG6j6ktJyorGYaqR8bGTDjXKp4_BMlkXSz-xqr7geQXdDmnROB8zY9qzq8rszNfLB7lHpn23jOEq0pC9qBFNthh4adrU9cbKCcOmuJ4JGK4_zl2AKvh86RKCfMWlAg5v9znSmfU3lN2OagDMHNkeO46JvPL_0FyYyurho6oegraf7gsQw1LDEeBuZOV-pLCDiFtT0");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">2018 Ford Mustang</span>
+<span class="text-[10px] text-text-secondary">ABC-1234</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm">Diagnostics &amp; Repair Quote</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-sm font-bold">$120.00</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                                    Pending
+                                </span>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="bg-primary hover:bg-blue-600 text-white text-xs font-bold py-1.5 px-3 rounded shadow transition-colors">
+                                        Pay Now
+                                    </button>
+<button class="size-8 flex items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-[#3b4754] text-text-secondary hover:text-primary transition-colors" title="View Quote">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-[#283039] flex items-center justify-between">
+<span class="text-xs text-text-secondary">Showing <span class="font-bold text-gray-900 dark:text-white">1-5</span> of <span class="font-bold text-gray-900 dark:text-white">12</span> invoices</span>
+<div class="flex items-center gap-2">
+<button class="size-8 flex items-center justify-center rounded border border-gray-200 dark:border-[#3b4754] text-text-secondary hover:bg-gray-50 dark:hover:bg-[#3b4754] disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded bg-primary text-white font-bold text-sm">1</button>
+<button class="size-8 flex items-center justify-center rounded border border-gray-200 dark:border-[#3b4754] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#3b4754] font-medium text-sm">2</button>
+<button class="size-8 flex items-center justify-center rounded border border-gray-200 dark:border-[#3b4754] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#3b4754] font-medium text-sm">3</button>
+<button class="size-8 flex items-center justify-center rounded border border-gray-200 dark:border-[#3b4754] text-text-secondary hover:bg-gray-50 dark:hover:bg-[#3b4754]">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-r from-slate-900 to-slate-800 dark:from-[#161b22] dark:to-[#1c2127] rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-white shadow-md">
+<div class="flex items-start gap-4">
+<div class="p-3 bg-white/10 rounded-lg">
+<span class="material-symbols-outlined text-white text-[28px]">support_agent</span>
+</div>
+<div>
+<h3 class="text-xl font-bold">Have questions about an invoice?</h3>
+<p class="text-gray-300 text-sm mt-1 max-w-lg">Our support team is available Monday to Friday, 9am - 6pm to help you with any billing inquiries.</p>
+</div>
+</div>
+<button class="shrink-0 bg-white text-slate-900 hover:bg-gray-100 font-bold py-2.5 px-6 rounded-lg transition-colors text-sm">
+                Contact Support
+            </button>
+</div>
+</div>
+</main>
+
+</body></html>

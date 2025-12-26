@@ -1,0 +1,3502 @@
+[
+  {
+    "id": "AUTH-001",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Login input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Login",
+      "Call function with test data for Validate Login input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-002",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Login data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Login",
+      "Call function with test data for Handle invalid Login data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-003",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Login endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Login",
+      "Send HTTP request to endpoint related to Login",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-004",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Login endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Login",
+      "Send HTTP request to endpoint related to Login",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-005",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Login component without crashing",
+    "steps": [
+      "Render component associated with Login",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-006",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Login form fields with Zod",
+    "steps": [
+      "Render component associated with Login",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-007",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Login flow successfully",
+    "steps": [
+      "Navigate to Login page via UI",
+      "Perform full user workflow for User can complete Login flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-008",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Login",
+    "steps": [
+      "Navigate to Login page via UI",
+      "Perform full user workflow for User sees updated data after Login",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-009",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Login fails",
+    "steps": [
+      "Attempt malicious input/action on Login",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-010",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Login input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Login",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-011",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Register input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Register",
+      "Call function with test data for Validate Register input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-012",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Register data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Register",
+      "Call function with test data for Handle invalid Register data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-013",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Register endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Register",
+      "Send HTTP request to endpoint related to Register",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-014",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Register endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Register",
+      "Send HTTP request to endpoint related to Register",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-015",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Register component without crashing",
+    "steps": [
+      "Render component associated with Register",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-016",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Register form fields with Zod",
+    "steps": [
+      "Render component associated with Register",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-017",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Register flow successfully",
+    "steps": [
+      "Navigate to Register page via UI",
+      "Perform full user workflow for User can complete Register flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-018",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Register",
+    "steps": [
+      "Navigate to Register page via UI",
+      "Perform full user workflow for User sees updated data after Register",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-019",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Register fails",
+    "steps": [
+      "Attempt malicious input/action on Register",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-020",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Register input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Register",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-021",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Role Guards input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Role Guards",
+      "Call function with test data for Validate Role Guards input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-022",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Role Guards data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Role Guards",
+      "Call function with test data for Handle invalid Role Guards data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-023",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Role Guards endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Role Guards",
+      "Send HTTP request to endpoint related to Role Guards",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-024",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Role Guards endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Role Guards",
+      "Send HTTP request to endpoint related to Role Guards",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-025",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Role Guards component without crashing",
+    "steps": [
+      "Render component associated with Role Guards",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-026",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Role Guards form fields with Zod",
+    "steps": [
+      "Render component associated with Role Guards",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-027",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Role Guards flow successfully",
+    "steps": [
+      "Navigate to Role Guards page via UI",
+      "Perform full user workflow for User can complete Role Guards flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-028",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Role Guards",
+    "steps": [
+      "Navigate to Role Guards page via UI",
+      "Perform full user workflow for User sees updated data after Role Guards",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-029",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Role Guards fails",
+    "steps": [
+      "Attempt malicious input/action on Role Guards",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-030",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Role Guards input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Role Guards",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-031",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Session Management input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Session Management",
+      "Call function with test data for Validate Session Management input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-032",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Session Management data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Session Management",
+      "Call function with test data for Handle invalid Session Management data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-033",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Session Management endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Session Management",
+      "Send HTTP request to endpoint related to Session Management",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-034",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Session Management endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Session Management",
+      "Send HTTP request to endpoint related to Session Management",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-035",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Session Management component without crashing",
+    "steps": [
+      "Render component associated with Session Management",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-036",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Session Management form fields with Zod",
+    "steps": [
+      "Render component associated with Session Management",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-037",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Session Management flow successfully",
+    "steps": [
+      "Navigate to Session Management page via UI",
+      "Perform full user workflow for User can complete Session Management flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-038",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Session Management",
+    "steps": [
+      "Navigate to Session Management page via UI",
+      "Perform full user workflow for User sees updated data after Session Management",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-039",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Session Management fails",
+    "steps": [
+      "Attempt malicious input/action on Session Management",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-040",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Session Management input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Session Management",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-041",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Password Reset input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Password Reset",
+      "Call function with test data for Validate Password Reset input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-042",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Password Reset data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Password Reset",
+      "Call function with test data for Handle invalid Password Reset data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-043",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Password Reset endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Password Reset",
+      "Send HTTP request to endpoint related to Password Reset",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-044",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Password Reset endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Password Reset",
+      "Send HTTP request to endpoint related to Password Reset",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-045",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Password Reset component without crashing",
+    "steps": [
+      "Render component associated with Password Reset",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-046",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Password Reset form fields with Zod",
+    "steps": [
+      "Render component associated with Password Reset",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-047",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Password Reset flow successfully",
+    "steps": [
+      "Navigate to Password Reset page via UI",
+      "Perform full user workflow for User can complete Password Reset flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-048",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Password Reset",
+    "steps": [
+      "Navigate to Password Reset page via UI",
+      "Perform full user workflow for User sees updated data after Password Reset",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-049",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Password Reset fails",
+    "steps": [
+      "Attempt malicious input/action on Password Reset",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-050",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Password Reset input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Password Reset",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-051",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Metrics Calculation input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Metrics Calculation",
+      "Call function with test data for Validate Metrics Calculation input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-052",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Metrics Calculation data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Metrics Calculation",
+      "Call function with test data for Handle invalid Metrics Calculation data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-053",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Metrics Calculation endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Metrics Calculation",
+      "Send HTTP request to endpoint related to Metrics Calculation",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-054",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Metrics Calculation endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Metrics Calculation",
+      "Send HTTP request to endpoint related to Metrics Calculation",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-055",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Metrics Calculation component without crashing",
+    "steps": [
+      "Render component associated with Metrics Calculation",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-056",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Metrics Calculation form fields with Zod",
+    "steps": [
+      "Render component associated with Metrics Calculation",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-057",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Metrics Calculation flow successfully",
+    "steps": [
+      "Navigate to Metrics Calculation page via UI",
+      "Perform full user workflow for User can complete Metrics Calculation flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-058",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Metrics Calculation",
+    "steps": [
+      "Navigate to Metrics Calculation page via UI",
+      "Perform full user workflow for User sees updated data after Metrics Calculation",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-059",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Metrics Calculation fails",
+    "steps": [
+      "Attempt malicious input/action on Metrics Calculation",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-060",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Metrics Calculation input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Metrics Calculation",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-061",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Active Jobs List input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Active Jobs List",
+      "Call function with test data for Validate Active Jobs List input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-062",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Active Jobs List data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Active Jobs List",
+      "Call function with test data for Handle invalid Active Jobs List data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-063",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Active Jobs List endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Active Jobs List",
+      "Send HTTP request to endpoint related to Active Jobs List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-064",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Active Jobs List endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Active Jobs List",
+      "Send HTTP request to endpoint related to Active Jobs List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-065",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Active Jobs List component without crashing",
+    "steps": [
+      "Render component associated with Active Jobs List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-066",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Active Jobs List form fields with Zod",
+    "steps": [
+      "Render component associated with Active Jobs List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-067",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Active Jobs List flow successfully",
+    "steps": [
+      "Navigate to Active Jobs List page via UI",
+      "Perform full user workflow for User can complete Active Jobs List flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-068",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Active Jobs List",
+    "steps": [
+      "Navigate to Active Jobs List page via UI",
+      "Perform full user workflow for User sees updated data after Active Jobs List",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-069",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Active Jobs List fails",
+    "steps": [
+      "Attempt malicious input/action on Active Jobs List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-070",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Active Jobs List input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Active Jobs List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-071",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Job Filtering input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Job Filtering",
+      "Call function with test data for Validate Job Filtering input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-072",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Job Filtering data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Job Filtering",
+      "Call function with test data for Handle invalid Job Filtering data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-073",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Job Filtering endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Job Filtering",
+      "Send HTTP request to endpoint related to Job Filtering",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-074",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Job Filtering endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Job Filtering",
+      "Send HTTP request to endpoint related to Job Filtering",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-075",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Job Filtering component without crashing",
+    "steps": [
+      "Render component associated with Job Filtering",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-076",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Job Filtering form fields with Zod",
+    "steps": [
+      "Render component associated with Job Filtering",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-077",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Job Filtering flow successfully",
+    "steps": [
+      "Navigate to Job Filtering page via UI",
+      "Perform full user workflow for User can complete Job Filtering flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-078",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Job Filtering",
+    "steps": [
+      "Navigate to Job Filtering page via UI",
+      "Perform full user workflow for User sees updated data after Job Filtering",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-079",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Job Filtering fails",
+    "steps": [
+      "Attempt malicious input/action on Job Filtering",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-080",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Job Filtering input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Job Filtering",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-081",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Status Updates input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Status Updates",
+      "Call function with test data for Validate Status Updates input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-082",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Status Updates data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Status Updates",
+      "Call function with test data for Handle invalid Status Updates data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-083",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Status Updates endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Status Updates",
+      "Send HTTP request to endpoint related to Status Updates",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-084",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Status Updates endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Status Updates",
+      "Send HTTP request to endpoint related to Status Updates",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-085",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Status Updates component without crashing",
+    "steps": [
+      "Render component associated with Status Updates",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-086",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Status Updates form fields with Zod",
+    "steps": [
+      "Render component associated with Status Updates",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-087",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Status Updates flow successfully",
+    "steps": [
+      "Navigate to Status Updates page via UI",
+      "Perform full user workflow for User can complete Status Updates flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-088",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Status Updates",
+    "steps": [
+      "Navigate to Status Updates page via UI",
+      "Perform full user workflow for User sees updated data after Status Updates",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-089",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Status Updates fails",
+    "steps": [
+      "Attempt malicious input/action on Status Updates",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-090",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Status Updates input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Status Updates",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-091",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Notifications input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Notifications",
+      "Call function with test data for Validate Notifications input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-092",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Notifications data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Notifications",
+      "Call function with test data for Handle invalid Notifications data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-093",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Notifications endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Notifications",
+      "Send HTTP request to endpoint related to Notifications",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-094",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Notifications endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Notifications",
+      "Send HTTP request to endpoint related to Notifications",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-095",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Notifications component without crashing",
+    "steps": [
+      "Render component associated with Notifications",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-096",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Notifications form fields with Zod",
+    "steps": [
+      "Render component associated with Notifications",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-097",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Notifications flow successfully",
+    "steps": [
+      "Navigate to Notifications page via UI",
+      "Perform full user workflow for User can complete Notifications flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-098",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Notifications",
+    "steps": [
+      "Navigate to Notifications page via UI",
+      "Perform full user workflow for User sees updated data after Notifications",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-099",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Notifications fails",
+    "steps": [
+      "Attempt malicious input/action on Notifications",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-100",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Notifications input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Notifications",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-101",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Workflow Transitions input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Workflow Transitions",
+      "Call function with test data for Validate Workflow Transitions input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-102",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Workflow Transitions data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Workflow Transitions",
+      "Call function with test data for Handle invalid Workflow Transitions data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-103",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Workflow Transitions endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Workflow Transitions",
+      "Send HTTP request to endpoint related to Workflow Transitions",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-104",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Workflow Transitions endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Workflow Transitions",
+      "Send HTTP request to endpoint related to Workflow Transitions",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-105",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Workflow Transitions component without crashing",
+    "steps": [
+      "Render component associated with Workflow Transitions",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-106",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Workflow Transitions form fields with Zod",
+    "steps": [
+      "Render component associated with Workflow Transitions",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-107",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Workflow Transitions flow successfully",
+    "steps": [
+      "Navigate to Workflow Transitions page via UI",
+      "Perform full user workflow for User can complete Workflow Transitions flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-108",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Workflow Transitions",
+    "steps": [
+      "Navigate to Workflow Transitions page via UI",
+      "Perform full user workflow for User sees updated data after Workflow Transitions",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-109",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Workflow Transitions fails",
+    "steps": [
+      "Attempt malicious input/action on Workflow Transitions",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-110",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Workflow Transitions input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Workflow Transitions",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-111",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Work Records (Parts/Labor) input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Work Records (Parts/Labor)",
+      "Call function with test data for Validate Work Records (Parts/Labor) input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-112",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Work Records (Parts/Labor) data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Work Records (Parts/Labor)",
+      "Call function with test data for Handle invalid Work Records (Parts/Labor) data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-113",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Work Records (Parts/Labor) endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Work Records (Parts/Labor)",
+      "Send HTTP request to endpoint related to Work Records (Parts/Labor)",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-114",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Work Records (Parts/Labor) endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Work Records (Parts/Labor)",
+      "Send HTTP request to endpoint related to Work Records (Parts/Labor)",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-115",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Work Records (Parts/Labor) component without crashing",
+    "steps": [
+      "Render component associated with Work Records (Parts/Labor)",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-116",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Work Records (Parts/Labor) form fields with Zod",
+    "steps": [
+      "Render component associated with Work Records (Parts/Labor)",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-117",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Work Records (Parts/Labor) flow successfully",
+    "steps": [
+      "Navigate to Work Records (Parts/Labor) page via UI",
+      "Perform full user workflow for User can complete Work Records (Parts/Labor) flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-118",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Work Records (Parts/Labor)",
+    "steps": [
+      "Navigate to Work Records (Parts/Labor) page via UI",
+      "Perform full user workflow for User sees updated data after Work Records (Parts/Labor)",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-119",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Work Records (Parts/Labor) fails",
+    "steps": [
+      "Attempt malicious input/action on Work Records (Parts/Labor)",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-120",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Work Records (Parts/Labor) input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Work Records (Parts/Labor)",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-121",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Cost Calculations input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Cost Calculations",
+      "Call function with test data for Validate Cost Calculations input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-122",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Cost Calculations data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Cost Calculations",
+      "Call function with test data for Handle invalid Cost Calculations data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-123",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Cost Calculations endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Cost Calculations",
+      "Send HTTP request to endpoint related to Cost Calculations",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-124",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Cost Calculations endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Cost Calculations",
+      "Send HTTP request to endpoint related to Cost Calculations",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-125",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Cost Calculations component without crashing",
+    "steps": [
+      "Render component associated with Cost Calculations",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-126",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Cost Calculations form fields with Zod",
+    "steps": [
+      "Render component associated with Cost Calculations",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-127",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Cost Calculations flow successfully",
+    "steps": [
+      "Navigate to Cost Calculations page via UI",
+      "Perform full user workflow for User can complete Cost Calculations flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-128",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Cost Calculations",
+    "steps": [
+      "Navigate to Cost Calculations page via UI",
+      "Perform full user workflow for User sees updated data after Cost Calculations",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-129",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Cost Calculations fails",
+    "steps": [
+      "Attempt malicious input/action on Cost Calculations",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-130",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Cost Calculations input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Cost Calculations",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-131",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Internal Comments input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Internal Comments",
+      "Call function with test data for Validate Internal Comments input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-132",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Internal Comments data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Internal Comments",
+      "Call function with test data for Handle invalid Internal Comments data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-133",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Internal Comments endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Internal Comments",
+      "Send HTTP request to endpoint related to Internal Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-134",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Internal Comments endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Internal Comments",
+      "Send HTTP request to endpoint related to Internal Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-135",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Internal Comments component without crashing",
+    "steps": [
+      "Render component associated with Internal Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-136",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Internal Comments form fields with Zod",
+    "steps": [
+      "Render component associated with Internal Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-137",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Internal Comments flow successfully",
+    "steps": [
+      "Navigate to Internal Comments page via UI",
+      "Perform full user workflow for User can complete Internal Comments flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-138",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Internal Comments",
+    "steps": [
+      "Navigate to Internal Comments page via UI",
+      "Perform full user workflow for User sees updated data after Internal Comments",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-139",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Internal Comments fails",
+    "steps": [
+      "Attempt malicious input/action on Internal Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-140",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Internal Comments input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Internal Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-141",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Public Comments input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Public Comments",
+      "Call function with test data for Validate Public Comments input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-142",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Public Comments data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Public Comments",
+      "Call function with test data for Handle invalid Public Comments data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-143",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Public Comments endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Public Comments",
+      "Send HTTP request to endpoint related to Public Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-144",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Public Comments endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Public Comments",
+      "Send HTTP request to endpoint related to Public Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-145",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Public Comments component without crashing",
+    "steps": [
+      "Render component associated with Public Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-146",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Public Comments form fields with Zod",
+    "steps": [
+      "Render component associated with Public Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-147",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Public Comments flow successfully",
+    "steps": [
+      "Navigate to Public Comments page via UI",
+      "Perform full user workflow for User can complete Public Comments flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-148",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Public Comments",
+    "steps": [
+      "Navigate to Public Comments page via UI",
+      "Perform full user workflow for User sees updated data after Public Comments",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-149",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Public Comments fails",
+    "steps": [
+      "Attempt malicious input/action on Public Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-150",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Public Comments input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Public Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-151",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Dashboard Overview input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Dashboard Overview",
+      "Call function with test data for Validate Dashboard Overview input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-152",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Dashboard Overview data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Dashboard Overview",
+      "Call function with test data for Handle invalid Dashboard Overview data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-153",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Dashboard Overview endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Dashboard Overview",
+      "Send HTTP request to endpoint related to Dashboard Overview",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-154",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Dashboard Overview endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Dashboard Overview",
+      "Send HTTP request to endpoint related to Dashboard Overview",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-155",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Dashboard Overview component without crashing",
+    "steps": [
+      "Render component associated with Dashboard Overview",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-156",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Dashboard Overview form fields with Zod",
+    "steps": [
+      "Render component associated with Dashboard Overview",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-157",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Dashboard Overview flow successfully",
+    "steps": [
+      "Navigate to Dashboard Overview page via UI",
+      "Perform full user workflow for User can complete Dashboard Overview flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-158",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Dashboard Overview",
+    "steps": [
+      "Navigate to Dashboard Overview page via UI",
+      "Perform full user workflow for User sees updated data after Dashboard Overview",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-159",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Dashboard Overview fails",
+    "steps": [
+      "Attempt malicious input/action on Dashboard Overview",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-160",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Dashboard Overview input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Dashboard Overview",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-161",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate My Garage List input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for My Garage List",
+      "Call function with test data for Validate My Garage List input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-162",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid My Garage List data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for My Garage List",
+      "Call function with test data for Handle invalid My Garage List data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-163",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET My Garage List endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for My Garage List",
+      "Send HTTP request to endpoint related to My Garage List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-164",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET My Garage List endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for My Garage List",
+      "Send HTTP request to endpoint related to My Garage List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-165",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render My Garage List component without crashing",
+    "steps": [
+      "Render component associated with My Garage List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-166",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate My Garage List form fields with Zod",
+    "steps": [
+      "Render component associated with My Garage List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-167",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete My Garage List flow successfully",
+    "steps": [
+      "Navigate to My Garage List page via UI",
+      "Perform full user workflow for User can complete My Garage List flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-168",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after My Garage List",
+    "steps": [
+      "Navigate to My Garage List page via UI",
+      "Perform full user workflow for User sees updated data after My Garage List",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-169",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on My Garage List fails",
+    "steps": [
+      "Attempt malicious input/action on My Garage List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-170",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in My Garage List input sanitized",
+    "steps": [
+      "Attempt malicious input/action on My Garage List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-171",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Add Vehicle input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Add Vehicle",
+      "Call function with test data for Validate Add Vehicle input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-172",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Add Vehicle data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Add Vehicle",
+      "Call function with test data for Handle invalid Add Vehicle data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-173",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Add Vehicle endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Add Vehicle",
+      "Send HTTP request to endpoint related to Add Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-174",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Add Vehicle endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Add Vehicle",
+      "Send HTTP request to endpoint related to Add Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-175",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Add Vehicle component without crashing",
+    "steps": [
+      "Render component associated with Add Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-176",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Add Vehicle form fields with Zod",
+    "steps": [
+      "Render component associated with Add Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-177",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Add Vehicle flow successfully",
+    "steps": [
+      "Navigate to Add Vehicle page via UI",
+      "Perform full user workflow for User can complete Add Vehicle flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-178",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Add Vehicle",
+    "steps": [
+      "Navigate to Add Vehicle page via UI",
+      "Perform full user workflow for User sees updated data after Add Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-179",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Add Vehicle fails",
+    "steps": [
+      "Attempt malicious input/action on Add Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-180",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Add Vehicle input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Add Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-181",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Invoice List input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Invoice List",
+      "Call function with test data for Validate Invoice List input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-182",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Invoice List data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Invoice List",
+      "Call function with test data for Handle invalid Invoice List data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-183",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Invoice List endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Invoice List",
+      "Send HTTP request to endpoint related to Invoice List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-184",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Invoice List endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Invoice List",
+      "Send HTTP request to endpoint related to Invoice List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-185",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Invoice List component without crashing",
+    "steps": [
+      "Render component associated with Invoice List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-186",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Invoice List form fields with Zod",
+    "steps": [
+      "Render component associated with Invoice List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-187",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Invoice List flow successfully",
+    "steps": [
+      "Navigate to Invoice List page via UI",
+      "Perform full user workflow for User can complete Invoice List flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-188",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Invoice List",
+    "steps": [
+      "Navigate to Invoice List page via UI",
+      "Perform full user workflow for User sees updated data after Invoice List",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-189",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Invoice List fails",
+    "steps": [
+      "Attempt malicious input/action on Invoice List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-190",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Invoice List input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Invoice List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-191",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Support Ticket input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Support Ticket",
+      "Call function with test data for Validate Support Ticket input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-192",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Support Ticket data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Support Ticket",
+      "Call function with test data for Handle invalid Support Ticket data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-193",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Support Ticket endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Support Ticket",
+      "Send HTTP request to endpoint related to Support Ticket",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-194",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Support Ticket endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Support Ticket",
+      "Send HTTP request to endpoint related to Support Ticket",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-195",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Support Ticket component without crashing",
+    "steps": [
+      "Render component associated with Support Ticket",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-196",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Support Ticket form fields with Zod",
+    "steps": [
+      "Render component associated with Support Ticket",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-197",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Support Ticket flow successfully",
+    "steps": [
+      "Navigate to Support Ticket page via UI",
+      "Perform full user workflow for User can complete Support Ticket flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-198",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Support Ticket",
+    "steps": [
+      "Navigate to Support Ticket page via UI",
+      "Perform full user workflow for User sees updated data after Support Ticket",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-199",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Support Ticket fails",
+    "steps": [
+      "Attempt malicious input/action on Support Ticket",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-200",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Support Ticket input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Support Ticket",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-201",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Create Vehicle input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Create Vehicle",
+      "Call function with test data for Validate Create Vehicle input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-202",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Create Vehicle data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Create Vehicle",
+      "Call function with test data for Handle invalid Create Vehicle data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-203",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Create Vehicle endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Create Vehicle",
+      "Send HTTP request to endpoint related to Create Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-204",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Create Vehicle endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Create Vehicle",
+      "Send HTTP request to endpoint related to Create Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-205",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Create Vehicle component without crashing",
+    "steps": [
+      "Render component associated with Create Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-206",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Create Vehicle form fields with Zod",
+    "steps": [
+      "Render component associated with Create Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-207",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Create Vehicle flow successfully",
+    "steps": [
+      "Navigate to Create Vehicle page via UI",
+      "Perform full user workflow for User can complete Create Vehicle flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-208",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Create Vehicle",
+    "steps": [
+      "Navigate to Create Vehicle page via UI",
+      "Perform full user workflow for User sees updated data after Create Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-209",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Create Vehicle fails",
+    "steps": [
+      "Attempt malicious input/action on Create Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-210",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Create Vehicle input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Create Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-211",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Update Vehicle input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Update Vehicle",
+      "Call function with test data for Validate Update Vehicle input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-212",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Update Vehicle data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Update Vehicle",
+      "Call function with test data for Handle invalid Update Vehicle data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-213",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Update Vehicle endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Update Vehicle",
+      "Send HTTP request to endpoint related to Update Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-214",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Update Vehicle endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Update Vehicle",
+      "Send HTTP request to endpoint related to Update Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-215",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Update Vehicle component without crashing",
+    "steps": [
+      "Render component associated with Update Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-216",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Update Vehicle form fields with Zod",
+    "steps": [
+      "Render component associated with Update Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-217",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Update Vehicle flow successfully",
+    "steps": [
+      "Navigate to Update Vehicle page via UI",
+      "Perform full user workflow for User can complete Update Vehicle flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-218",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Update Vehicle",
+    "steps": [
+      "Navigate to Update Vehicle page via UI",
+      "Perform full user workflow for User sees updated data after Update Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-219",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Update Vehicle fails",
+    "steps": [
+      "Attempt malicious input/action on Update Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-220",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Update Vehicle input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Update Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-221",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Search by VIN input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Search by VIN",
+      "Call function with test data for Validate Search by VIN input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-222",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Search by VIN data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Search by VIN",
+      "Call function with test data for Handle invalid Search by VIN data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-223",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Search by VIN endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Search by VIN",
+      "Send HTTP request to endpoint related to Search by VIN",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-224",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Search by VIN endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Search by VIN",
+      "Send HTTP request to endpoint related to Search by VIN",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-225",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Search by VIN component without crashing",
+    "steps": [
+      "Render component associated with Search by VIN",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-226",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Search by VIN form fields with Zod",
+    "steps": [
+      "Render component associated with Search by VIN",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-227",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Search by VIN flow successfully",
+    "steps": [
+      "Navigate to Search by VIN page via UI",
+      "Perform full user workflow for User can complete Search by VIN flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-228",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Search by VIN",
+    "steps": [
+      "Navigate to Search by VIN page via UI",
+      "Perform full user workflow for User sees updated data after Search by VIN",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-229",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Search by VIN fails",
+    "steps": [
+      "Attempt malicious input/action on Search by VIN",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-230",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Search by VIN input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Search by VIN",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-231",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Vehicle History input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Vehicle History",
+      "Call function with test data for Validate Vehicle History input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-232",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Vehicle History data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Vehicle History",
+      "Call function with test data for Handle invalid Vehicle History data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-233",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Vehicle History endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Vehicle History",
+      "Send HTTP request to endpoint related to Vehicle History",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-234",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Vehicle History endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Vehicle History",
+      "Send HTTP request to endpoint related to Vehicle History",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-235",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Vehicle History component without crashing",
+    "steps": [
+      "Render component associated with Vehicle History",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-236",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Vehicle History form fields with Zod",
+    "steps": [
+      "Render component associated with Vehicle History",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-237",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Vehicle History flow successfully",
+    "steps": [
+      "Navigate to Vehicle History page via UI",
+      "Perform full user workflow for User can complete Vehicle History flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-238",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Vehicle History",
+    "steps": [
+      "Navigate to Vehicle History page via UI",
+      "Perform full user workflow for User sees updated data after Vehicle History",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-239",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Vehicle History fails",
+    "steps": [
+      "Attempt malicious input/action on Vehicle History",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-240",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Vehicle History input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Vehicle History",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-241",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Validate Archive Vehicle input with strict Zod schema",
+    "steps": [
+      "Mock Repository/Service dependencies for Archive Vehicle",
+      "Call function with test data for Validate Archive Vehicle input with strict Zod schema",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-242",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Handle invalid Archive Vehicle data gracefully",
+    "steps": [
+      "Mock Repository/Service dependencies for Archive Vehicle",
+      "Call function with test data for Handle invalid Archive Vehicle data gracefully",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-243",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Archive Vehicle endpoint returns 200 OK",
+    "steps": [
+      "Seed database with prerequisites for Archive Vehicle",
+      "Send HTTP request to endpoint related to Archive Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-244",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "POST/GET Archive Vehicle endpoint returns 400 on bad data",
+    "steps": [
+      "Seed database with prerequisites for Archive Vehicle",
+      "Send HTTP request to endpoint related to Archive Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-245",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Render Archive Vehicle component without crashing",
+    "steps": [
+      "Render component associated with Archive Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-246",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Validate Archive Vehicle form fields with Zod",
+    "steps": [
+      "Render component associated with Archive Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-247",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User can complete Archive Vehicle flow successfully",
+    "steps": [
+      "Navigate to Archive Vehicle page via UI",
+      "Perform full user workflow for User can complete Archive Vehicle flow successfully",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-248",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "User sees updated data after Archive Vehicle",
+    "steps": [
+      "Navigate to Archive Vehicle page via UI",
+      "Perform full user workflow for User sees updated data after Archive Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-249",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "SQL Injection attempt on Archive Vehicle fails",
+    "steps": [
+      "Attempt malicious input/action on Archive Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-250",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "XSS payload in Archive Vehicle input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Archive Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  }
+]

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Vehicles Screen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-dark": "#0f6cbd",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1c2127",
+                        "text-secondary": "#9dabb9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col overflow-x-hidden transition-colors duration-200">
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-[#283039] bg-white dark:bg-[#111418]">
+<div class="px-4 md:px-8 lg:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-8 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">garage_home</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">AutoFix Garage</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">Dashboard</a>
+<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary py-1" href="#">My Vehicles</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">Invoices</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4 md:gap-6">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-gray-100 dark:hover:bg-[#283039] transition-colors relative">
+<span class="material-symbols-outlined text-gray-600 dark:text-white text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-[#111418]"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-[#283039]">
+<div class="hidden lg:flex flex-col items-end">
+<span class="text-sm font-bold leading-none">Alex Morgan</span>
+<span class="text-xs text-primary font-medium mt-1">Premium Member</span>
+</div>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-gray-100 dark:ring-[#283039]" data-alt="User profile picture of a man smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2CQDFb4LVNA78dLDm8Jbz3Loo5b0uWegy-4rLkh0AVSUpMz9gzoerGPy2LFiOHfhqvOtVZ5cGPQLw-l3IJYU6EW4JQcrKIHK_Nq0KjlSZvsvLd2sSRYlk-vdtV9Y37E0GTj6ENRe4viAEcKr4cm4-_9NlRPCiW0Y8LXeDuXFKIcfFe--lvNcCCiiV-1gIEJK7AfOaaRAXlliRs88QPbgaK8ulnyN2lydH47y0IaQ529SmeBoYiY4frOj59bb7LvhhRAmGTlHxISs");'>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex justify-center w-full px-4 md:px-8 py-8">
+<div class="w-full max-w-[1280px] flex flex-col gap-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h1 class="text-3xl font-black leading-tight tracking-[-0.033em]">My Vehicles</h1>
+<p class="text-text-secondary text-base font-normal mt-1">Manage your garage, view service history, and schedule repairs.</p>
+</div>
+<button class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold py-2.5 px-5 rounded-lg transition-all text-sm shadow-md shadow-blue-500/20">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Add Vehicle
+                </button>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-card-dark border border-gray-200 dark:border-[#283039] rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-white placeholder-text-secondary" placeholder="Search by make, model, or license plate..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 sm:pb-0">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-card-dark border border-gray-200 dark:border-[#283039] rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-[#283039] transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        All Statuses
+                    </button>
+<button class="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-bold whitespace-nowrap">
+                        Active (3)
+                    </button>
+<button class="px-4 py-2 bg-transparent text-text-secondary hover:text-slate-900 dark:hover:text-white border border-transparent hover:bg-gray-100 dark:hover:bg-[#283039] rounded-lg text-sm font-medium transition-colors whitespace-nowrap">
+                        Archived
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="group bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow">
+<div class="relative h-48 bg-gray-100 dark:bg-gray-800 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNN9mdRP5DbtNqp-TDSy6vKO66T3kuFwYnbz2BeGwV_wVCEMyUbYgg-TBzFZjmmtjo-OrckjkG6j6ktJyorGYaqR8bGTDjXKp4_BMlkXSz-xqr7geQXdDmnROB8zY9qzq8rszNfLB7lHpn23jOEq0pC9qBFNthh4adrU9cbKCcOmuJ4JGK4_zl2AKvh86RKCfMWlAg5v9znSmfU3lN2OagDMHNkeO46JvPL_0FyYyurho6oegraf7gsQw1LDEeBuZOV-pLCDiFtT0");'>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 shadow-sm backdrop-blur-md">
+<span class="size-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                                In Repair
+                            </span>
+</div>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="dropdown relative">
+<button class="size-8 rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm text-slate-700 dark:text-white flex items-center justify-center hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<div class="mb-4">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">2018 Ford Mustang</h3>
+<p class="text-sm text-text-secondary mt-1">GT Premium Fastback</p>
+<div class="flex items-center gap-2 mt-3 text-xs font-medium text-text-secondary bg-gray-50 dark:bg-[#161b22] w-fit px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">directions_car</span>
+                                License: ABC-1234
+                            </div>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-[#283039]">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-semibold text-text-secondary uppercase tracking-wider">Status</span>
+<span class="text-sm font-bold text-primary">Diagnostics Phase</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-[#283039] rounded-full h-1.5 mb-4">
+<div class="bg-primary h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-2 px-3 bg-white dark:bg-[#283039] border border-gray-200 dark:border-[#3b4754] text-slate-700 dark:text-white rounded-lg text-sm font-bold hover:bg-gray-50 dark:hover:bg-[#3b4754] transition-colors">
+                                    View Details
+                                </button>
+<button class="flex-1 py-2 px-3 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary-dark transition-colors shadow-sm">
+                                    Track Repair
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="group bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow">
+<div class="relative h-48 bg-gray-100 dark:bg-gray-800 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYvyl-OwgKr_U5AiItl-6CFN0W1T2IWobquqJ_by17xeU6nxkALHcd4SXSsEAV-tfXNo86HLDh4YPxj_nnCOYwmPnDnKqKSwCNrLnTbat5YCRfAahrg3TB0CP09gzCVPe8V3aluIRaaaosIYtx6DwOl0UMBbefHxw8pcUna-rIR-hlkMMwrwACGhvKS3wltwEa5v-f5AmgVFlumsMMpio82hjnHuWBW2Skij6OCLOwzNnKCIyUToN81qPp81YVsGZGJHLLKxDh-BQ");'>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-800 shadow-sm backdrop-blur-md">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                                Service Due
+                            </span>
+</div>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="dropdown relative">
+<button class="size-8 rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm text-slate-700 dark:text-white flex items-center justify-center hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<div class="mb-4">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">2015 Mazda MX-5</h3>
+<p class="text-sm text-text-secondary mt-1">Miata Grand Touring</p>
+<div class="flex items-center gap-2 mt-3 text-xs font-medium text-text-secondary bg-gray-50 dark:bg-[#161b22] w-fit px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">directions_car</span>
+                                License: MIA-5555
+                            </div>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-[#283039]">
+<div class="flex items-center gap-2 mb-4 text-amber-600 dark:text-amber-400">
+<span class="material-symbols-outlined text-[18px]">calendar_clock</span>
+<span class="text-sm font-semibold">Oil Change Overdue</span>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-2 px-3 bg-white dark:bg-[#283039] border border-gray-200 dark:border-[#3b4754] text-slate-700 dark:text-white rounded-lg text-sm font-bold hover:bg-gray-50 dark:hover:bg-[#3b4754] transition-colors">
+                                    View Details
+                                </button>
+<button class="flex-1 py-2 px-3 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary-dark transition-colors shadow-sm">
+                                    Schedule
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="group bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow">
+<div class="relative h-48 bg-gray-100 dark:bg-gray-800 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCg4rIx4YQQyqPAHXTUa_ORJ_cOS4595D6aWuXG2emAkQugCYvdSS0vwZK34eWfa-CAV6-S_e2sxe-KQH1wDVk-V8Blsz_FQxsN5f2f0nwUxj-UV4ehm5Mjnd3_BJpukmC2rVMTi7KeB_LG5DMVHIP-XTCa5vgGfx8CSM1hX2M5L3yGJHIIFSjz8eG0Q5wnHEliLfG9PQV57a-_Jo4tT5Z_zeAfE8v5P5QNj6Fufu6KVIuBX7enpvJhH8Br6zhpsUfBY_Qbmv34Uf4");'>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800 shadow-sm backdrop-blur-md">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                No Issues
+                            </span>
+</div>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="dropdown relative">
+<button class="size-8 rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm text-slate-700 dark:text-white flex items-center justify-center hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<div class="mb-4">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">2020 Honda CR-V</h3>
+<p class="text-sm text-text-secondary mt-1">EX-L AWD</p>
+<div class="flex items-center gap-2 mt-3 text-xs font-medium text-text-secondary bg-gray-50 dark:bg-[#161b22] w-fit px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">directions_car</span>
+                                License: XYZ-9876
+                            </div>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-[#283039]">
+<div class="flex items-center gap-2 mb-4 text-text-secondary">
+<span class="material-symbols-outlined text-[18px]">event_upcoming</span>
+<span class="text-sm">Next Service: Jan 2024</span>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-2 px-3 bg-white dark:bg-[#283039] border border-gray-200 dark:border-[#3b4754] text-slate-700 dark:text-white rounded-lg text-sm font-bold hover:bg-gray-50 dark:hover:bg-[#3b4754] transition-colors">
+                                    View Details
+                                </button>
+<button class="flex-1 py-2 px-3 bg-white dark:bg-[#283039] border border-gray-200 dark:border-[#3b4754] text-slate-700 dark:text-white rounded-lg text-sm font-bold hover:bg-gray-50 dark:hover:bg-[#3b4754] transition-colors">
+                                    Book Service
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<button class="min-h-[300px] flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-[#3b4754] bg-transparent hover:bg-gray-50 dark:hover:bg-[#1c2127] text-text-secondary hover:text-primary transition-all group p-8">
+<div class="size-16 rounded-full bg-gray-100 dark:bg-[#283039] group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[32px] group-hover:text-primary">add</span>
+</div>
+<div class="text-center">
+<span class="block text-lg font-bold text-slate-700 dark:text-white group-hover:text-primary mb-1">Add Another Vehicle</span>
+<span class="text-sm font-normal">Register a new car to your garage</span>
+</div>
+</button>
+</div>
+</div>
+</main>
+
+</body></html>

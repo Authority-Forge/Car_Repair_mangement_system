@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Details - GarageManager</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111418",
+                        "surface-dark": "#1c2127",
+                        "border-dark": "#283039",
+                        "text-secondary": "#9dabb9"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar for chat area */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col overflow-x-hidden text-white">
+<!-- Top Navigation -->
+<div class="relative flex w-full flex-col border-b border-solid border-b-border-dark bg-background-dark">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">garage</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">GarageManager</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Jobs</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Inventory</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Customers</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Settings</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-secondary flex border-none bg-border-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-border-dark focus:border-none h-full placeholder:text-text-secondary px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search jobs, VIN..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">New Job</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border border-border-dark" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBj2vMggH_aUipfehkLrXg6kolqny021MmrQGUFTUJAz2QHWCnPTUlNxwPd_C5xqgUzXam9dN-qgsVCi6_fZ03b3O1URKS9iibI3KPxQMoA-Phk93wBvR9AdA3_7IiVm3C12yssFYuDSOfjs1VdpO0D5zD_Fbft7LfV1rJAuptxOX1EnBLkwkeRy44sZFLtKoLohmVkz8JJXKNAwrYbXIgNBolCxj-NLwa_eI_L7UwB-42qQciPRZJaO7OTfa1ZICl2EGqecH2fXqU");'></div>
+</div>
+</header>
+</div>
+</div>
+<!-- Main Content Wrapper -->
+<div class="flex-1 px-4 md:px-10 py-6 max-w-[1600px] mx-auto w-full">
+<!-- Breadcrumbs & Header -->
+<div class="mb-6">
+<div class="flex flex-wrap gap-2 pb-2">
+<a class="text-text-secondary text-sm font-medium leading-normal hover:text-white" href="#">Jobs</a>
+<span class="text-text-secondary text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">Job #8492</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">2018 Ford F-150 Raptor</h1>
+<div class="flex flex-wrap items-center gap-3 text-text-secondary text-sm">
+<span>Job #8492</span>
+<span class="w-1 h-1 rounded-full bg-text-secondary"></span>
+<span>Created Oct 24, 2023</span>
+<span class="w-1 h-1 rounded-full bg-text-secondary"></span>
+<span>Advisor: John Doe</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<!-- Status Selector -->
+<div class="relative min-w-[180px]">
+<select class="appearance-none w-full bg-surface-dark border border-border-dark text-white text-sm font-medium rounded-lg px-4 py-2.5 pr-8 focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer">
+<option selected="" value="in_progress">In Progress</option>
+<option value="waiting_parts">Waiting on Parts</option>
+<option value="completed">Completed</option>
+<option value="invoiced">Invoiced</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-text-secondary pointer-events-none">expand_more</span>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-surface-dark border border-border-dark hover:bg-border-dark text-white text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span class="hidden sm:inline">Print</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 text-white text-sm font-bold transition-colors shadow-[0_0_15px_rgba(19,127,236,0.3)]">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Save Changes</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left Column: Context (Vehicle & Customer) -->
+<div class="col-span-12 lg:col-span-3 flex flex-col gap-6">
+<!-- Vehicle Card -->
+<div class="bg-surface-dark rounded-xl border border-border-dark p-5">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-white text-base font-bold">Vehicle Details</h3>
+<button class="text-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<div class="aspect-video w-full rounded-lg bg-center bg-cover mb-4 relative overflow-hidden" data-alt="Side profile of a red Ford F-150 truck" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB28ZOm66wYqu2cQklv_SqQjCAfBphCcujRpM6xmwbvHUtB_N1E9c2zOl0wW8BRlRYNpEG4ksGLBsIFeTpvoR1zFiMBKGc8KSwASJSLS9fYWB-N1Yc7ZNWNvOvbCNQbKjDuAZt81rPny5vhLYCyWSp186tGwaLVAxc9ewoLeRhydcMH_Q9mR5cq6cZDXLrPDbgimovJ4r15aKp70a313uksID7Y449nAK-l0CzuLNhIsZL-r_5GNJkHD2tCpt0YvE1Yerit5B4wEF4");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-2 left-2 text-white text-xs font-medium px-2 py-1 bg-black/40 rounded backdrop-blur-sm">
+                            Stock #1920
+                        </div>
+</div>
+<div class="space-y-4">
+<div>
+<p class="text-xs text-text-secondary uppercase tracking-wider font-semibold mb-1">VIN</p>
+<p class="text-white text-sm font-mono tracking-wide">1FTEW1CP5JF19482</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs text-text-secondary uppercase tracking-wider font-semibold mb-1">Mileage</p>
+<p class="text-white text-sm">84,202 mi</p>
+</div>
+<div>
+<p class="text-xs text-text-secondary uppercase tracking-wider font-semibold mb-1">License</p>
+<p class="text-white text-sm">7KLP921</p>
+</div>
+</div>
+<div>
+<p class="text-xs text-text-secondary uppercase tracking-wider font-semibold mb-1">Engine</p>
+<p class="text-white text-sm">3.5L V6 EcoBoost</p>
+</div>
+</div>
+</div>
+<!-- Customer Card -->
+<div class="bg-surface-dark rounded-xl border border-border-dark p-5">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-white text-base font-bold">Customer</h3>
+<button class="text-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">person_search</span>
+</button>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<div class="size-10 rounded-full bg-border-dark flex items-center justify-center text-white font-bold text-sm">
+                            JD
+                        </div>
+<div>
+<p class="text-white font-medium">John Doe</p>
+<p class="text-text-secondary text-xs">Customer since 2019</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">phone</span>
+<span class="text-white text-sm">(555) 123-4567</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">mail</span>
+<span class="text-white text-sm">john.doe@example.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">location_on</span>
+<span class="text-white text-sm truncate">123 Maple Street, Springfield</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-5">
+<button class="flex items-center justify-center gap-2 py-2 rounded-lg bg-border-dark hover:bg-white/10 transition-colors text-white text-xs font-bold">
+<span class="material-symbols-outlined text-[16px]">call</span>
+                            Call
+                        </button>
+<button class="flex items-center justify-center gap-2 py-2 rounded-lg bg-border-dark hover:bg-white/10 transition-colors text-white text-xs font-bold">
+<span class="material-symbols-outlined text-[16px]">sms</span>
+                            SMS
+                        </button>
+</div>
+</div>
+<!-- History -->
+<div class="bg-surface-dark rounded-xl border border-border-dark p-5 flex-1">
+<h3 class="text-white text-base font-bold mb-4">Service History</h3>
+<div class="space-y-4">
+<div class="border-l-2 border-primary/40 pl-3">
+<p class="text-white text-sm font-medium">Job #7201</p>
+<p class="text-text-secondary text-xs">Jun 12, 2023 • Oil Change</p>
+</div>
+<div class="border-l-2 border-border-dark pl-3">
+<p class="text-white text-sm font-medium">Job #6592</p>
+<p class="text-text-secondary text-xs">Jan 04, 2023 • Tire Rotation</p>
+</div>
+<div class="border-l-2 border-border-dark pl-3">
+<p class="text-white text-sm font-medium">Job #5100</p>
+<p class="text-text-secondary text-xs">Sep 15, 2022 • Brake Inspection</p>
+</div>
+</div>
+<button class="w-full text-center text-primary text-sm font-medium mt-4 hover:underline">View All History</button>
+</div>
+</div>
+<!-- Center Column: Work Records -->
+<div class="col-span-12 lg:col-span-6 flex flex-col gap-6">
+<div class="bg-surface-dark rounded-xl border border-border-dark flex flex-col h-full">
+<!-- Section Header -->
+<div class="p-5 border-b border-border-dark flex items-center justify-between">
+<h3 class="text-white text-lg font-bold">Work Records</h3>
+<div class="flex gap-2">
+<button class="flex items-center gap-1 text-xs font-bold text-text-secondary bg-border-dark px-3 py-1.5 rounded hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[16px]">settings</span>
+                                Settings
+                            </button>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-background-dark/50 border-b border-border-dark">
+<th class="p-4 text-xs font-semibold text-text-secondary uppercase tracking-wider w-[40%]">Description</th>
+<th class="p-4 text-xs font-semibold text-text-secondary uppercase tracking-wider w-[15%]">Type</th>
+<th class="p-4 text-xs font-semibold text-text-secondary uppercase tracking-wider text-right w-[15%]">Qty/Hrs</th>
+<th class="p-4 text-xs font-semibold text-text-secondary uppercase tracking-wider text-right w-[15%]">Rate</th>
+<th class="p-4 text-xs font-semibold text-text-secondary uppercase tracking-wider text-right w-[15%]">Total</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-dark">
+<!-- Row 1 -->
+<tr class="group hover:bg-border-dark/30 transition-colors">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="text-white text-sm font-medium">Oil Change Synthetic</span>
+<span class="text-text-secondary text-xs">Standard service package</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-md bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/20">Labor</span>
+</td>
+<td class="p-4 text-right text-white text-sm">0.5</td>
+<td class="p-4 text-right text-text-secondary text-sm">$90.00</td>
+<td class="p-4 text-right text-white font-medium text-sm">$45.00</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-border-dark/30 transition-colors">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="text-white text-sm font-medium">Oil Filter (OEM)</span>
+<span class="text-text-secondary text-xs">Part #: FL-500S</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-md bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">Part</span>
+</td>
+<td class="p-4 text-right text-white text-sm">1</td>
+<td class="p-4 text-right text-text-secondary text-sm">$12.50</td>
+<td class="p-4 text-right text-white font-medium text-sm">$12.50</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-border-dark/30 transition-colors">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="text-white text-sm font-medium">Synthetic Motor Oil 5W-30</span>
+<span class="text-text-secondary text-xs">Per Quart</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-md bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">Part</span>
+</td>
+<td class="p-4 text-right text-white text-sm">6</td>
+<td class="p-4 text-right text-text-secondary text-sm">$9.50</td>
+<td class="p-4 text-right text-white font-medium text-sm">$57.00</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-border-dark/30 transition-colors">
+<td class="p-4">
+<div class="flex flex-col">
+<span class="text-white text-sm font-medium">Rear Brake Pads Replacement</span>
+<span class="text-text-secondary text-xs">Includes rotor resurfacing</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-md bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/20">Labor</span>
+</td>
+<td class="p-4 text-right text-white text-sm">1.5</td>
+<td class="p-4 text-right text-text-secondary text-sm">$120.00</td>
+<td class="p-4 text-right text-white font-medium text-sm">$180.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Add Button -->
+<div class="p-4 border-b border-border-dark bg-background-dark/30">
+<button class="w-full flex items-center justify-center gap-2 border border-dashed border-text-secondary/40 rounded-lg p-3 text-text-secondary hover:text-white hover:border-primary hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">add_circle</span>
+<span class="text-sm font-medium">Add Part or Labor</span>
+</button>
+</div>
+<!-- Summary -->
+<div class="mt-auto p-5 bg-background-dark/50 rounded-b-xl">
+<div class="flex flex-col gap-2 ml-auto w-full max-w-xs">
+<div class="flex justify-between text-sm">
+<span class="text-text-secondary">Subtotal</span>
+<span class="text-white font-medium">$294.50</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-text-secondary">Tax (8%)</span>
+<span class="text-white font-medium">$23.56</span>
+</div>
+<div class="h-px bg-border-dark my-1"></div>
+<div class="flex justify-between text-lg">
+<span class="text-white font-bold">Total</span>
+<span class="text-primary font-black">$318.06</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Communication -->
+<div class="col-span-12 lg:col-span-3 flex flex-col h-full min-h-[600px]">
+<div class="bg-surface-dark rounded-xl border border-border-dark flex flex-col h-full overflow-hidden">
+<!-- Tabs -->
+<div class="flex border-b border-border-dark">
+<button class="flex-1 py-3 text-sm font-medium border-b-2 border-primary text-white bg-background-dark/30">
+                            Internal Note
+                        </button>
+<button class="flex-1 py-3 text-sm font-medium text-text-secondary hover:text-white transition-colors border-b-2 border-transparent">
+                            Customer Chat
+                        </button>
+</div>
+<!-- Chat Stream -->
+<div class="flex-1 p-4 overflow-y-auto space-y-4">
+<!-- System Message -->
+<div class="flex flex-col items-center gap-1 my-4">
+<span class="text-[10px] text-text-secondary uppercase tracking-widest font-semibold">Today</span>
+<div class="px-3 py-1 bg-border-dark rounded-full text-xs text-text-secondary">
+                                Job created by John Doe
+                            </div>
+</div>
+<!-- Internal Note Item -->
+<div class="flex gap-3">
+<div class="size-8 rounded-full bg-yellow-600/20 text-yellow-500 flex items-center justify-center border border-yellow-600/30 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">sticky_note_2</span>
+</div>
+<div class="flex flex-col gap-1 max-w-[85%]">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-white">Mike (Mechanic)</span>
+<span class="text-[10px] text-text-secondary">10:42 AM</span>
+</div>
+<div class="bg-yellow-900/10 border border-yellow-800/30 p-3 rounded-lg rounded-tl-none text-sm text-yellow-100/90 leading-relaxed">
+                                    Found a small leak in the rear differential. Not critical yet, but we should mention it to the customer.
+                                </div>
+</div>
+</div>
+<!-- Customer Message (Simulated) -->
+<div class="flex gap-3">
+<div class="size-8 rounded-full bg-blue-500/20 text-blue-500 flex items-center justify-center border border-blue-500/30 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<div class="flex flex-col gap-1 max-w-[85%]">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-white">Customer</span>
+<span class="text-[10px] text-text-secondary">11:15 AM</span>
+</div>
+<div class="bg-border-dark p-3 rounded-lg rounded-tl-none text-sm text-white leading-relaxed">
+                                    Can you also check the tire pressure? The light came on yesterday.
+                                </div>
+</div>
+</div>
+<!-- Internal Note Item -->
+<div class="flex gap-3">
+<div class="size-8 rounded-full bg-yellow-600/20 text-yellow-500 flex items-center justify-center border border-yellow-600/30 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">sticky_note_2</span>
+</div>
+<div class="flex flex-col gap-1 max-w-[85%]">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-white">John (Advisor)</span>
+<span class="text-[10px] text-text-secondary">11:20 AM</span>
+</div>
+<div class="bg-yellow-900/10 border border-yellow-800/30 p-3 rounded-lg rounded-tl-none text-sm text-yellow-100/90 leading-relaxed">
+                                    Added tire rotation and pressure check to the work order.
+                                </div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-3 border-t border-border-dark bg-surface-dark">
+<div class="relative">
+<textarea class="w-full bg-background-dark border border-border-dark rounded-lg p-3 pr-12 text-sm text-white placeholder:text-text-secondary focus:ring-1 focus:ring-primary focus:border-primary resize-none h-24" placeholder="Type an internal note..."></textarea>
+<div class="absolute bottom-2 right-2 flex gap-1">
+<button class="p-1.5 text-text-secondary hover:text-primary hover:bg-border-dark rounded-md transition-colors">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="p-1.5 text-white bg-primary hover:bg-blue-600 rounded-md transition-colors">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2 px-1">
+<div class="flex items-center gap-1.5 cursor-pointer group">
+<div class="w-3 h-3 rounded-full border border-text-secondary group-hover:border-primary"></div>
+<span class="text-xs text-text-secondary group-hover:text-white">Notify Customer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

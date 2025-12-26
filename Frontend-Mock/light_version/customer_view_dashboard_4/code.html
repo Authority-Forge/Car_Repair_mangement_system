@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support Screen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1c2127",
+                        "text-secondary": "#9dabb9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #3b4754;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col overflow-x-hidden transition-colors duration-200">
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-[#283039] bg-white dark:bg-[#111418]">
+<div class="px-4 md:px-8 lg:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-8 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">garage_home</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">AutoFix Garage</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">Dashboard</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">My Vehicles</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal py-1 transition-colors" href="#">Invoices</a>
+<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary py-1" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4 md:gap-6">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-gray-100 dark:hover:bg-[#283039] transition-colors relative">
+<span class="material-symbols-outlined text-gray-600 dark:text-white text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-[#111418]"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-[#283039]">
+<div class="hidden lg:flex flex-col items-end">
+<span class="text-sm font-bold leading-none">Alex Morgan</span>
+<span class="text-xs text-primary font-medium mt-1">Premium Member</span>
+</div>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-gray-100 dark:ring-[#283039]" data-alt="User profile picture of a man smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2CQDFb4LVNA78dLDm8Jbz3Loo5b0uWegy-4rLkh0AVSUpMz9gzoerGPy2LFiOHfhqvOtVZ5cGPQLw-l3IJYU6EW4JQcrKIHK_Nq0KjlSZvsvLd2sSRYlk-vdtV9Y37E0GTj6ENRe4viAEcKr4cm4-_9NlRPCiW0Y8LXeDuXFKIcfFe--lvNcCCiiV-1gIEJK7AfOaaRAXlliRs88QPbgaK8ulnyN2lydH47y0IaQ529SmeBoYiY4frOj59bb7LvhhRAmGTlHxISs");'>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex justify-center w-full px-4 md:px-8 py-8">
+<div class="w-full max-w-[1280px] grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Support Center</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal">Find answers to common questions or get in touch with our team.</p>
+</div>
+<section class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] overflow-hidden">
+<div class="p-6 border-b border-gray-200 dark:border-[#283039]">
+<h3 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">quiz</span>
+                        Frequently Asked Questions
+                    </h3>
+</div>
+<div class="divide-y divide-gray-200 dark:divide-[#283039]">
+<details class="group p-6 cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-lg select-none">
+                            How do I book a service appointment?
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            You can book a service appointment directly through your dashboard by clicking on the "Book Service" button. Alternatively, you can call our support line during operating hours. We recommend booking at least 3 days in advance for routine maintenance.
+                        </div>
+</details>
+<details class="group p-6 cursor-pointer" open="">
+<summary class="flex items-center justify-between font-bold text-lg select-none">
+                            What are your operating hours?
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            Our garage is open Monday through Friday from 8:00 AM to 6:00 PM. On Saturdays, we are open for express services from 9:00 AM to 2:00 PM. We are closed on Sundays and major public holidays.
+                        </div>
+</details>
+<details class="group p-6 cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-lg select-none">
+                            Do you offer loaner vehicles?
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            Yes, we offer courtesy loaner vehicles for services that require your car to be in the shop for more than 24 hours. These are subject to availability and must be reserved when booking your appointment.
+                        </div>
+</details>
+<details class="group p-6 cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-lg select-none">
+                            How can I view and pay my invoices?
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-gray-400">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            All your past and current invoices are available under the "Invoices" tab in the top navigation. You can view details, download PDFs, and pay securely online using a credit card or bank transfer.
+                        </div>
+</details>
+</div>
+</section>
+<section class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] p-6">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">mail</span>
+                    Send us a message
+                </h3>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300" for="name">Your Name</label>
+<input class="w-full bg-gray-50 dark:bg-[#161b22] border-gray-300 dark:border-[#3b4754] rounded-lg px-4 py-2.5 text-sm focus:ring-primary focus:border-primary transition-shadow" id="name" type="text" value="Alex Morgan"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300" for="email">Email Address</label>
+<input class="w-full bg-gray-50 dark:bg-[#161b22] border-gray-300 dark:border-[#3b4754] rounded-lg px-4 py-2.5 text-sm focus:ring-primary focus:border-primary transition-shadow" id="email" type="email" value="alex.morgan@example.com"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300" for="subject">Subject</label>
+<select class="w-full bg-gray-50 dark:bg-[#161b22] border-gray-300 dark:border-[#3b4754] rounded-lg px-4 py-2.5 text-sm focus:ring-primary focus:border-primary transition-shadow" id="subject">
+<option>General Inquiry</option>
+<option>Service Scheduling</option>
+<option>Billing Question</option>
+<option>Feedback</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300" for="message">Message</label>
+<textarea class="w-full bg-gray-50 dark:bg-[#161b22] border-gray-300 dark:border-[#3b4754] rounded-lg px-4 py-2.5 text-sm focus:ring-primary focus:border-primary transition-shadow" id="message" placeholder="How can we help you today?" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 flex justify-end">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 px-6 rounded-lg transition-all text-sm shadow-md shadow-blue-500/20 flex items-center gap-2" type="button">
+                            Send Message
+                            <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</form>
+</section>
+</div>
+<aside class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] overflow-hidden">
+<div class="bg-primary/10 p-6 flex flex-col items-center justify-center gap-2 border-b border-primary/10">
+<div class="size-16 rounded-full bg-white dark:bg-[#283039] flex items-center justify-center shadow-sm text-primary mb-2">
+<span class="material-symbols-outlined text-[32px]">support_agent</span>
+</div>
+<h3 class="font-bold text-xl">We're here to help</h3>
+<p class="text-sm text-center text-slate-500 dark:text-slate-400">Our team is available to assist you with any questions or concerns.</p>
+</div>
+<div class="p-6 flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-[#283039] flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-0.5">Phone</p>
+<a class="text-lg font-bold hover:text-primary transition-colors" href="tel:+18001234567">+1 (800) 123-4567</a>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Mon-Fri 8am-6pm</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-[#283039] flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-0.5">Email</p>
+<a class="text-base font-bold hover:text-primary transition-colors break-all" href="mailto:support@autofix.com">support@autofix.com</a>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Response within 24h</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-[#283039] flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-0.5">Garage Location</p>
+<p class="text-sm font-medium">1234 Motorway Blvd,<br/>Automotive District, CA 90210</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-gray-50 dark:bg-[#161b22] border-t border-gray-200 dark:border-[#283039] grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center gap-1 bg-white dark:bg-[#283039] hover:bg-gray-50 dark:hover:bg-[#3b4754] text-gray-700 dark:text-white border border-gray-200 dark:border-[#3b4754] font-bold py-3 px-2 rounded-lg transition-all text-xs group">
+<span class="material-symbols-outlined text-[20px] text-primary group-hover:scale-110 transition-transform">chat</span>
+                        Live Chat
+                    </button>
+<button class="flex flex-col items-center justify-center gap-1 bg-white dark:bg-[#283039] hover:bg-gray-50 dark:hover:bg-[#3b4754] text-gray-700 dark:text-white border border-gray-200 dark:border-[#3b4754] font-bold py-3 px-2 rounded-lg transition-all text-xs group">
+<span class="material-symbols-outlined text-[20px] text-primary group-hover:scale-110 transition-transform">call</span>
+                        Call Now
+                    </button>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-[#283039] p-6">
+<h3 class="font-bold text-base mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400">schedule</span>
+                    Operating Hours
+                </h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="font-medium">Monday - Friday</span>
+<span class="font-bold text-primary">8:00 AM - 6:00 PM</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="font-medium">Saturday</span>
+<span class="font-bold text-slate-500 dark:text-slate-400">9:00 AM - 2:00 PM</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="font-medium">Sunday</span>
+<span class="text-xs font-bold uppercase px-2 py-0.5 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">Closed</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+
+</body></html>
