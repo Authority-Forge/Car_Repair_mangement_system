@@ -21,7 +21,7 @@ CATEGORIES = [
     "Security & Edge Case"
 ]
 
-# Templates for test generation (simplified for volume, would be more specific in reality)
+# Templates for test generation
 TEMPLATES = {
     "Backend Unit": [
         "Validate {subfeature} input with strict Zod schema",
@@ -33,7 +33,17 @@ TEMPLATES = {
         "Check {subfeature} business rule B",
         "Validate {subfeature} DTO transformation",
         "Ensure {subfeature} handles null values",
-        "Verify {subfeature} data formatting"
+        "Verify {subfeature} data formatting",
+        "Verify {subfeature} boundary value analysis",
+        "Check {subfeature} exact character limit logic",
+        "Validate {subfeature} empty string handling",
+        "Ensure {subfeature} numeric overflow protection",
+        "Check {subfeature} unicode character support",
+        "Verify {subfeature} boolean logic gates",
+        "Check {subfeature} case sensitivity handling",
+        "Validate {subfeature} invalid enum values",
+        "Ensure {subfeature} handles undefined inputs",
+        "Check {subfeature} date format validation"
     ],
     "Backend Integration": [
         "POST/GET {subfeature} endpoint returns 200 OK",
@@ -45,7 +55,17 @@ TEMPLATES = {
         "Middleware authenticates {subfeature} request",
         "Response body matches {subfeature} Zod schema",
         "Headers are correct for {subfeature}",
-        "Performance acceptable for {subfeature}"
+        "Performance acceptable for {subfeature}",
+        "Concurrent {subfeature} requests handled correctly",
+        "Rate limiter triggers for {subfeature}",
+        "Idempotency check for {subfeature}",
+        "Cache invalidation triggers on {subfeature}",
+        "Database constraints prevent duplicate {subfeature}",
+        "Orphaned records prevented in {subfeature}",
+        "Soft delete works for {subfeature}",
+        "Audit logs created for {subfeature}",
+        "CORS headers correct for {subfeature}",
+        "Timeout handling for {subfeature}"
     ],
     "Frontend Unit": [
         "Render {subfeature} component without crashing",
@@ -57,7 +77,17 @@ TEMPLATES = {
         "Component props validate against {subfeature} schema",
         "Loading state shown during {subfeature}",
         "Success toast appears after {subfeature}",
-        "Accessibility tags present in {subfeature}"
+        "Accessibility tags present in {subfeature}",
+        "Component unmounts cleanly for {subfeature}",
+        "Rerender is efficient for {subfeature}",
+        "Theme change handled in {subfeature}",
+        "Mobile viewport responsive for {subfeature}",
+        "Tablet viewport responsive for {subfeature}",
+        "Keyboard navigation works in {subfeature}",
+        "Focus management correct in {subfeature}",
+        "Tooltip appears on hover in {subfeature}",
+        "Long text triggers truncation in {subfeature}",
+        "Empty state rendered for {subfeature}"
     ],
     "E2E": [
         "User can complete {subfeature} flow successfully",
@@ -69,7 +99,17 @@ TEMPLATES = {
         "Desktop layout renders {subfeature} correctly",
         "Form submission works for {subfeature}",
         "Cancel action works in {subfeature}",
-        "Logout during {subfeature} redirects to login"
+        "Logout during {subfeature} redirects to login",
+        "Back button works in {subfeature} flow",
+        "Deep link to {subfeature} works",
+        "Offline mode behavior for {subfeature}",
+        "Session timeout handling in {subfeature}",
+        "Multi-tab sync for {subfeature}",
+        "Performance metrics (LCP/FID) for {subfeature}",
+        "Error boundary catches {subfeature} crash",
+        "Analytics event fired for {subfeature}",
+        "Cookie consent interaction in {subfeature}",
+        "localization/i18n check for {subfeature}"
     ],
     "Security & Edge Case": [
         "SQL Injection attempt on {subfeature} fails",
@@ -81,7 +121,17 @@ TEMPLATES = {
         "Invalid content-type rejected by {subfeature}",
         "Expired token denied for {subfeature}",
         "CSRF token validated for {subfeature}",
-        "Sensitive data masked in {subfeature} logs"
+        "Sensitive data masked in {subfeature} logs",
+        "NULL byte injection fails on {subfeature}",
+        "Path traversal attempt fails on {subfeature}",
+        "HTTP Parameter Pollution fails on {subfeature}",
+        "Replay attack fails on {subfeature}",
+        "Timing attack mitigation for {subfeature}",
+        "Broken Object Level Authorization (BOLA) check {subfeature}",
+        "Mass assignment protection for {subfeature}",
+        "Improper Assets Management check {subfeature}",
+        "Insufficient Logging check {subfeature}",
+        "SSRF protection for {subfeature}"
     ]
 }
 
@@ -128,11 +178,12 @@ def generate_steps(category, subfeature, specific_desc):
 def main():
     test_list = []
     
-    # We want ~50 tests per Feature (Auth, MechanicDashboard...)
+    # We want 100 tests per Feature (Auth, MechanicDashboard...)
     # There are 5 Main Features.
     # Each Main Feature has 5 Subfeatures.
-    # We have 5 Categories.
-    # If we generate 2 tests per Category per Subfeature, that is 2 * 5 * 5 = 50 tests per Main Feature.
+    # We will generate 4 tests per Category per Subfeature.
+    # 5 Categories * 4 tests = 20 tests per Subfeature.
+    # 20 * 5 Subfeatures = 100 tests per Main Feature.
     
     overall_id_counter = 1
     
@@ -140,15 +191,9 @@ def main():
         feature_prefix = feature_name[:4].upper()
         
         for sub in subfeatures:
-            # For each subfeature, we want coverage across all 5 categories
-            # We'll pick 2 templates from each category to get 10 tests per subfeature (Total 50 per Main Feature)
-            
             for category in CATEGORIES:
-                # Pick first 2 templates for deterministic generation (or rotate)
-                # To make it look "comprehensive", we'll just take the first 2 appropriate ones
-                # Ideally we vary them, but for this generation we iterate
-                
-                selected_templates = TEMPLATES[category][:2] 
+                # Pick first 4 templates 
+                selected_templates = TEMPLATES[category][:4] 
                 
                 for idx, template in enumerate(selected_templates):
                     desc = template.format(subfeature=sub)
@@ -156,9 +201,9 @@ def main():
                     
                     test_item = {
                         "id": f"{feature_prefix}-{overall_id_counter:03d}",
-                        "feature": feature_name, # Main Feature Group
+                        "feature": feature_name,
                         "category": category,
-                        "type": category.split(" ")[0], # Unit/Integration/E2E
+                        "type": category.split(" ")[0], 
                         "description": desc,
                         "steps": steps,
                         "passes": False

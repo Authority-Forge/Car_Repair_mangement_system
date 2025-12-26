@@ -30,6 +30,34 @@
   {
     "id": "AUTH-003",
     "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Login logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Login",
+      "Call function with test data for Ensure Login logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-004",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Login success",
+    "steps": [
+      "Mock Repository/Service dependencies for Login",
+      "Call function with test data for Mock repository for Login success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-005",
+    "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
     "description": "POST/GET Login endpoint returns 200 OK",
@@ -42,7 +70,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-004",
+    "id": "AUTH-006",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -56,7 +84,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-005",
+    "id": "AUTH-007",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Login correctly",
+    "steps": [
+      "Seed database with prerequisites for Login",
+      "Send HTTP request to endpoint related to Login",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-008",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Login",
+    "steps": [
+      "Seed database with prerequisites for Login",
+      "Send HTTP request to endpoint related to Login",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-009",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -70,7 +126,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-006",
+    "id": "AUTH-010",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -84,7 +140,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-007",
+    "id": "AUTH-011",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Login input",
+    "steps": [
+      "Render component associated with Login",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-012",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Login interaction",
+    "steps": [
+      "Render component associated with Login",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-013",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -98,7 +182,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-008",
+    "id": "AUTH-014",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -112,7 +196,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-009",
+    "id": "AUTH-015",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Login page works",
+    "steps": [
+      "Navigate to Login page via UI",
+      "Perform full user workflow for Navigation to Login page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-016",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Login",
+    "steps": [
+      "Navigate to Login page via UI",
+      "Perform full user workflow for Browser history maintained in Login",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-017",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -126,7 +238,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-010",
+    "id": "AUTH-018",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -140,7 +252,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-011",
+    "id": "AUTH-019",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Login",
+    "steps": [
+      "Attempt malicious input/action on Login",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-020",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Login spam",
+    "steps": [
+      "Attempt malicious input/action on Login",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-021",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -154,7 +294,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-012",
+    "id": "AUTH-022",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -168,7 +308,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-013",
+    "id": "AUTH-023",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Register logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Register",
+      "Call function with test data for Ensure Register logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-024",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Register success",
+    "steps": [
+      "Mock Repository/Service dependencies for Register",
+      "Call function with test data for Mock repository for Register success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-025",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -182,7 +350,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-014",
+    "id": "AUTH-026",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -196,7 +364,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-015",
+    "id": "AUTH-027",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Register correctly",
+    "steps": [
+      "Seed database with prerequisites for Register",
+      "Send HTTP request to endpoint related to Register",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-028",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Register",
+    "steps": [
+      "Seed database with prerequisites for Register",
+      "Send HTTP request to endpoint related to Register",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-029",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -210,7 +406,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-016",
+    "id": "AUTH-030",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -224,7 +420,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-017",
+    "id": "AUTH-031",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Register input",
+    "steps": [
+      "Render component associated with Register",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-032",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Register interaction",
+    "steps": [
+      "Render component associated with Register",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-033",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -238,7 +462,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-018",
+    "id": "AUTH-034",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -252,7 +476,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-019",
+    "id": "AUTH-035",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Register page works",
+    "steps": [
+      "Navigate to Register page via UI",
+      "Perform full user workflow for Navigation to Register page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-036",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Register",
+    "steps": [
+      "Navigate to Register page via UI",
+      "Perform full user workflow for Browser history maintained in Register",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-037",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -266,7 +518,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-020",
+    "id": "AUTH-038",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -280,7 +532,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-021",
+    "id": "AUTH-039",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Register",
+    "steps": [
+      "Attempt malicious input/action on Register",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-040",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Register spam",
+    "steps": [
+      "Attempt malicious input/action on Register",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-041",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -294,7 +574,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-022",
+    "id": "AUTH-042",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -308,7 +588,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-023",
+    "id": "AUTH-043",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Role Guards logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Role Guards",
+      "Call function with test data for Ensure Role Guards logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-044",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Role Guards success",
+    "steps": [
+      "Mock Repository/Service dependencies for Role Guards",
+      "Call function with test data for Mock repository for Role Guards success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-045",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -322,7 +630,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-024",
+    "id": "AUTH-046",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -336,7 +644,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-025",
+    "id": "AUTH-047",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Role Guards correctly",
+    "steps": [
+      "Seed database with prerequisites for Role Guards",
+      "Send HTTP request to endpoint related to Role Guards",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-048",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Role Guards",
+    "steps": [
+      "Seed database with prerequisites for Role Guards",
+      "Send HTTP request to endpoint related to Role Guards",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-049",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -350,7 +686,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-026",
+    "id": "AUTH-050",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -364,7 +700,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-027",
+    "id": "AUTH-051",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Role Guards input",
+    "steps": [
+      "Render component associated with Role Guards",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-052",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Role Guards interaction",
+    "steps": [
+      "Render component associated with Role Guards",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-053",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -378,7 +742,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-028",
+    "id": "AUTH-054",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -392,7 +756,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-029",
+    "id": "AUTH-055",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Role Guards page works",
+    "steps": [
+      "Navigate to Role Guards page via UI",
+      "Perform full user workflow for Navigation to Role Guards page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-056",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Role Guards",
+    "steps": [
+      "Navigate to Role Guards page via UI",
+      "Perform full user workflow for Browser history maintained in Role Guards",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-057",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -406,7 +798,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-030",
+    "id": "AUTH-058",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -420,7 +812,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-031",
+    "id": "AUTH-059",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Role Guards",
+    "steps": [
+      "Attempt malicious input/action on Role Guards",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-060",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Role Guards spam",
+    "steps": [
+      "Attempt malicious input/action on Role Guards",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-061",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -434,7 +854,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-032",
+    "id": "AUTH-062",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -448,7 +868,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-033",
+    "id": "AUTH-063",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Session Management logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Session Management",
+      "Call function with test data for Ensure Session Management logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-064",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Session Management success",
+    "steps": [
+      "Mock Repository/Service dependencies for Session Management",
+      "Call function with test data for Mock repository for Session Management success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-065",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -462,7 +910,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-034",
+    "id": "AUTH-066",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -476,7 +924,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-035",
+    "id": "AUTH-067",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Session Management correctly",
+    "steps": [
+      "Seed database with prerequisites for Session Management",
+      "Send HTTP request to endpoint related to Session Management",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-068",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Session Management",
+    "steps": [
+      "Seed database with prerequisites for Session Management",
+      "Send HTTP request to endpoint related to Session Management",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-069",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -490,7 +966,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-036",
+    "id": "AUTH-070",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -504,7 +980,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-037",
+    "id": "AUTH-071",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Session Management input",
+    "steps": [
+      "Render component associated with Session Management",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-072",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Session Management interaction",
+    "steps": [
+      "Render component associated with Session Management",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-073",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -518,7 +1022,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-038",
+    "id": "AUTH-074",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -532,7 +1036,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-039",
+    "id": "AUTH-075",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Session Management page works",
+    "steps": [
+      "Navigate to Session Management page via UI",
+      "Perform full user workflow for Navigation to Session Management page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-076",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Session Management",
+    "steps": [
+      "Navigate to Session Management page via UI",
+      "Perform full user workflow for Browser history maintained in Session Management",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-077",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -546,7 +1078,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-040",
+    "id": "AUTH-078",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -560,7 +1092,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-041",
+    "id": "AUTH-079",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Session Management",
+    "steps": [
+      "Attempt malicious input/action on Session Management",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-080",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Session Management spam",
+    "steps": [
+      "Attempt malicious input/action on Session Management",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-081",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -574,7 +1134,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-042",
+    "id": "AUTH-082",
     "feature": "Auth",
     "category": "Backend Unit",
     "type": "Backend",
@@ -588,7 +1148,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-043",
+    "id": "AUTH-083",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Password Reset logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Password Reset",
+      "Call function with test data for Ensure Password Reset logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-084",
+    "feature": "Auth",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Password Reset success",
+    "steps": [
+      "Mock Repository/Service dependencies for Password Reset",
+      "Call function with test data for Mock repository for Password Reset success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-085",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -602,7 +1190,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-044",
+    "id": "AUTH-086",
     "feature": "Auth",
     "category": "Backend Integration",
     "type": "Backend",
@@ -616,7 +1204,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-045",
+    "id": "AUTH-087",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Password Reset correctly",
+    "steps": [
+      "Seed database with prerequisites for Password Reset",
+      "Send HTTP request to endpoint related to Password Reset",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-088",
+    "feature": "Auth",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Password Reset",
+    "steps": [
+      "Seed database with prerequisites for Password Reset",
+      "Send HTTP request to endpoint related to Password Reset",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-089",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -630,7 +1246,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-046",
+    "id": "AUTH-090",
     "feature": "Auth",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -644,7 +1260,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-047",
+    "id": "AUTH-091",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Password Reset input",
+    "steps": [
+      "Render component associated with Password Reset",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-092",
+    "feature": "Auth",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Password Reset interaction",
+    "steps": [
+      "Render component associated with Password Reset",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-093",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -658,7 +1302,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-048",
+    "id": "AUTH-094",
     "feature": "Auth",
     "category": "E2E",
     "type": "E2E",
@@ -672,7 +1316,35 @@
     "passes": false
   },
   {
-    "id": "AUTH-049",
+    "id": "AUTH-095",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Password Reset page works",
+    "steps": [
+      "Navigate to Password Reset page via UI",
+      "Perform full user workflow for Navigation to Password Reset page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-096",
+    "feature": "Auth",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Password Reset",
+    "steps": [
+      "Navigate to Password Reset page via UI",
+      "Perform full user workflow for Browser history maintained in Password Reset",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-097",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -686,7 +1358,7 @@
     "passes": false
   },
   {
-    "id": "AUTH-050",
+    "id": "AUTH-098",
     "feature": "Auth",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -700,7 +1372,35 @@
     "passes": false
   },
   {
-    "id": "MECH-051",
+    "id": "AUTH-099",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Password Reset",
+    "steps": [
+      "Attempt malicious input/action on Password Reset",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "AUTH-100",
+    "feature": "Auth",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Password Reset spam",
+    "steps": [
+      "Attempt malicious input/action on Password Reset",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-101",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -714,7 +1414,7 @@
     "passes": false
   },
   {
-    "id": "MECH-052",
+    "id": "MECH-102",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -728,7 +1428,35 @@
     "passes": false
   },
   {
-    "id": "MECH-053",
+    "id": "MECH-103",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Metrics Calculation logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Metrics Calculation",
+      "Call function with test data for Ensure Metrics Calculation logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-104",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Metrics Calculation success",
+    "steps": [
+      "Mock Repository/Service dependencies for Metrics Calculation",
+      "Call function with test data for Mock repository for Metrics Calculation success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-105",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -742,7 +1470,7 @@
     "passes": false
   },
   {
-    "id": "MECH-054",
+    "id": "MECH-106",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -756,7 +1484,35 @@
     "passes": false
   },
   {
-    "id": "MECH-055",
+    "id": "MECH-107",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Metrics Calculation correctly",
+    "steps": [
+      "Seed database with prerequisites for Metrics Calculation",
+      "Send HTTP request to endpoint related to Metrics Calculation",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-108",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Metrics Calculation",
+    "steps": [
+      "Seed database with prerequisites for Metrics Calculation",
+      "Send HTTP request to endpoint related to Metrics Calculation",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-109",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -770,7 +1526,7 @@
     "passes": false
   },
   {
-    "id": "MECH-056",
+    "id": "MECH-110",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -784,7 +1540,35 @@
     "passes": false
   },
   {
-    "id": "MECH-057",
+    "id": "MECH-111",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Metrics Calculation input",
+    "steps": [
+      "Render component associated with Metrics Calculation",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-112",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Metrics Calculation interaction",
+    "steps": [
+      "Render component associated with Metrics Calculation",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-113",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -798,7 +1582,7 @@
     "passes": false
   },
   {
-    "id": "MECH-058",
+    "id": "MECH-114",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -812,7 +1596,35 @@
     "passes": false
   },
   {
-    "id": "MECH-059",
+    "id": "MECH-115",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Metrics Calculation page works",
+    "steps": [
+      "Navigate to Metrics Calculation page via UI",
+      "Perform full user workflow for Navigation to Metrics Calculation page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-116",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Metrics Calculation",
+    "steps": [
+      "Navigate to Metrics Calculation page via UI",
+      "Perform full user workflow for Browser history maintained in Metrics Calculation",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-117",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -826,7 +1638,7 @@
     "passes": false
   },
   {
-    "id": "MECH-060",
+    "id": "MECH-118",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -840,7 +1652,35 @@
     "passes": false
   },
   {
-    "id": "MECH-061",
+    "id": "MECH-119",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Metrics Calculation",
+    "steps": [
+      "Attempt malicious input/action on Metrics Calculation",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-120",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Metrics Calculation spam",
+    "steps": [
+      "Attempt malicious input/action on Metrics Calculation",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-121",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -854,7 +1694,7 @@
     "passes": false
   },
   {
-    "id": "MECH-062",
+    "id": "MECH-122",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -868,7 +1708,35 @@
     "passes": false
   },
   {
-    "id": "MECH-063",
+    "id": "MECH-123",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Active Jobs List logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Active Jobs List",
+      "Call function with test data for Ensure Active Jobs List logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-124",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Active Jobs List success",
+    "steps": [
+      "Mock Repository/Service dependencies for Active Jobs List",
+      "Call function with test data for Mock repository for Active Jobs List success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-125",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -882,7 +1750,7 @@
     "passes": false
   },
   {
-    "id": "MECH-064",
+    "id": "MECH-126",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -896,7 +1764,35 @@
     "passes": false
   },
   {
-    "id": "MECH-065",
+    "id": "MECH-127",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Active Jobs List correctly",
+    "steps": [
+      "Seed database with prerequisites for Active Jobs List",
+      "Send HTTP request to endpoint related to Active Jobs List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-128",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Active Jobs List",
+    "steps": [
+      "Seed database with prerequisites for Active Jobs List",
+      "Send HTTP request to endpoint related to Active Jobs List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-129",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -910,7 +1806,7 @@
     "passes": false
   },
   {
-    "id": "MECH-066",
+    "id": "MECH-130",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -924,7 +1820,35 @@
     "passes": false
   },
   {
-    "id": "MECH-067",
+    "id": "MECH-131",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Active Jobs List input",
+    "steps": [
+      "Render component associated with Active Jobs List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-132",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Active Jobs List interaction",
+    "steps": [
+      "Render component associated with Active Jobs List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-133",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -938,7 +1862,7 @@
     "passes": false
   },
   {
-    "id": "MECH-068",
+    "id": "MECH-134",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -952,7 +1876,35 @@
     "passes": false
   },
   {
-    "id": "MECH-069",
+    "id": "MECH-135",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Active Jobs List page works",
+    "steps": [
+      "Navigate to Active Jobs List page via UI",
+      "Perform full user workflow for Navigation to Active Jobs List page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-136",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Active Jobs List",
+    "steps": [
+      "Navigate to Active Jobs List page via UI",
+      "Perform full user workflow for Browser history maintained in Active Jobs List",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-137",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -966,7 +1918,7 @@
     "passes": false
   },
   {
-    "id": "MECH-070",
+    "id": "MECH-138",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -980,7 +1932,35 @@
     "passes": false
   },
   {
-    "id": "MECH-071",
+    "id": "MECH-139",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Active Jobs List",
+    "steps": [
+      "Attempt malicious input/action on Active Jobs List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-140",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Active Jobs List spam",
+    "steps": [
+      "Attempt malicious input/action on Active Jobs List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-141",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -994,7 +1974,7 @@
     "passes": false
   },
   {
-    "id": "MECH-072",
+    "id": "MECH-142",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1008,7 +1988,35 @@
     "passes": false
   },
   {
-    "id": "MECH-073",
+    "id": "MECH-143",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Job Filtering logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Job Filtering",
+      "Call function with test data for Ensure Job Filtering logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-144",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Job Filtering success",
+    "steps": [
+      "Mock Repository/Service dependencies for Job Filtering",
+      "Call function with test data for Mock repository for Job Filtering success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-145",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1022,7 +2030,7 @@
     "passes": false
   },
   {
-    "id": "MECH-074",
+    "id": "MECH-146",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1036,7 +2044,35 @@
     "passes": false
   },
   {
-    "id": "MECH-075",
+    "id": "MECH-147",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Job Filtering correctly",
+    "steps": [
+      "Seed database with prerequisites for Job Filtering",
+      "Send HTTP request to endpoint related to Job Filtering",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-148",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Job Filtering",
+    "steps": [
+      "Seed database with prerequisites for Job Filtering",
+      "Send HTTP request to endpoint related to Job Filtering",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-149",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1050,7 +2086,7 @@
     "passes": false
   },
   {
-    "id": "MECH-076",
+    "id": "MECH-150",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1064,7 +2100,35 @@
     "passes": false
   },
   {
-    "id": "MECH-077",
+    "id": "MECH-151",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Job Filtering input",
+    "steps": [
+      "Render component associated with Job Filtering",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-152",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Job Filtering interaction",
+    "steps": [
+      "Render component associated with Job Filtering",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-153",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -1078,7 +2142,7 @@
     "passes": false
   },
   {
-    "id": "MECH-078",
+    "id": "MECH-154",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -1092,7 +2156,35 @@
     "passes": false
   },
   {
-    "id": "MECH-079",
+    "id": "MECH-155",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Job Filtering page works",
+    "steps": [
+      "Navigate to Job Filtering page via UI",
+      "Perform full user workflow for Navigation to Job Filtering page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-156",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Job Filtering",
+    "steps": [
+      "Navigate to Job Filtering page via UI",
+      "Perform full user workflow for Browser history maintained in Job Filtering",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-157",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1106,7 +2198,7 @@
     "passes": false
   },
   {
-    "id": "MECH-080",
+    "id": "MECH-158",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1120,7 +2212,35 @@
     "passes": false
   },
   {
-    "id": "MECH-081",
+    "id": "MECH-159",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Job Filtering",
+    "steps": [
+      "Attempt malicious input/action on Job Filtering",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-160",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Job Filtering spam",
+    "steps": [
+      "Attempt malicious input/action on Job Filtering",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-161",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1134,7 +2254,7 @@
     "passes": false
   },
   {
-    "id": "MECH-082",
+    "id": "MECH-162",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1148,7 +2268,35 @@
     "passes": false
   },
   {
-    "id": "MECH-083",
+    "id": "MECH-163",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Status Updates logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Status Updates",
+      "Call function with test data for Ensure Status Updates logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-164",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Status Updates success",
+    "steps": [
+      "Mock Repository/Service dependencies for Status Updates",
+      "Call function with test data for Mock repository for Status Updates success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-165",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1162,7 +2310,7 @@
     "passes": false
   },
   {
-    "id": "MECH-084",
+    "id": "MECH-166",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1176,7 +2324,35 @@
     "passes": false
   },
   {
-    "id": "MECH-085",
+    "id": "MECH-167",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Status Updates correctly",
+    "steps": [
+      "Seed database with prerequisites for Status Updates",
+      "Send HTTP request to endpoint related to Status Updates",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-168",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Status Updates",
+    "steps": [
+      "Seed database with prerequisites for Status Updates",
+      "Send HTTP request to endpoint related to Status Updates",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-169",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1190,7 +2366,7 @@
     "passes": false
   },
   {
-    "id": "MECH-086",
+    "id": "MECH-170",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1204,7 +2380,35 @@
     "passes": false
   },
   {
-    "id": "MECH-087",
+    "id": "MECH-171",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Status Updates input",
+    "steps": [
+      "Render component associated with Status Updates",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-172",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Status Updates interaction",
+    "steps": [
+      "Render component associated with Status Updates",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-173",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -1218,7 +2422,7 @@
     "passes": false
   },
   {
-    "id": "MECH-088",
+    "id": "MECH-174",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -1232,7 +2436,35 @@
     "passes": false
   },
   {
-    "id": "MECH-089",
+    "id": "MECH-175",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Status Updates page works",
+    "steps": [
+      "Navigate to Status Updates page via UI",
+      "Perform full user workflow for Navigation to Status Updates page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-176",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Status Updates",
+    "steps": [
+      "Navigate to Status Updates page via UI",
+      "Perform full user workflow for Browser history maintained in Status Updates",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-177",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1246,7 +2478,7 @@
     "passes": false
   },
   {
-    "id": "MECH-090",
+    "id": "MECH-178",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1260,7 +2492,35 @@
     "passes": false
   },
   {
-    "id": "MECH-091",
+    "id": "MECH-179",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Status Updates",
+    "steps": [
+      "Attempt malicious input/action on Status Updates",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-180",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Status Updates spam",
+    "steps": [
+      "Attempt malicious input/action on Status Updates",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-181",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1274,7 +2534,7 @@
     "passes": false
   },
   {
-    "id": "MECH-092",
+    "id": "MECH-182",
     "feature": "MechanicDashboard",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1288,7 +2548,35 @@
     "passes": false
   },
   {
-    "id": "MECH-093",
+    "id": "MECH-183",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Notifications logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Notifications",
+      "Call function with test data for Ensure Notifications logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-184",
+    "feature": "MechanicDashboard",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Notifications success",
+    "steps": [
+      "Mock Repository/Service dependencies for Notifications",
+      "Call function with test data for Mock repository for Notifications success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-185",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1302,7 +2590,7 @@
     "passes": false
   },
   {
-    "id": "MECH-094",
+    "id": "MECH-186",
     "feature": "MechanicDashboard",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1316,7 +2604,35 @@
     "passes": false
   },
   {
-    "id": "MECH-095",
+    "id": "MECH-187",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Notifications correctly",
+    "steps": [
+      "Seed database with prerequisites for Notifications",
+      "Send HTTP request to endpoint related to Notifications",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-188",
+    "feature": "MechanicDashboard",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Notifications",
+    "steps": [
+      "Seed database with prerequisites for Notifications",
+      "Send HTTP request to endpoint related to Notifications",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-189",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1330,7 +2646,7 @@
     "passes": false
   },
   {
-    "id": "MECH-096",
+    "id": "MECH-190",
     "feature": "MechanicDashboard",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1344,7 +2660,35 @@
     "passes": false
   },
   {
-    "id": "MECH-097",
+    "id": "MECH-191",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Notifications input",
+    "steps": [
+      "Render component associated with Notifications",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-192",
+    "feature": "MechanicDashboard",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Notifications interaction",
+    "steps": [
+      "Render component associated with Notifications",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-193",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -1358,7 +2702,7 @@
     "passes": false
   },
   {
-    "id": "MECH-098",
+    "id": "MECH-194",
     "feature": "MechanicDashboard",
     "category": "E2E",
     "type": "E2E",
@@ -1372,7 +2716,35 @@
     "passes": false
   },
   {
-    "id": "MECH-099",
+    "id": "MECH-195",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Notifications page works",
+    "steps": [
+      "Navigate to Notifications page via UI",
+      "Perform full user workflow for Navigation to Notifications page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-196",
+    "feature": "MechanicDashboard",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Notifications",
+    "steps": [
+      "Navigate to Notifications page via UI",
+      "Perform full user workflow for Browser history maintained in Notifications",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-197",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1386,7 +2758,7 @@
     "passes": false
   },
   {
-    "id": "MECH-100",
+    "id": "MECH-198",
     "feature": "MechanicDashboard",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1400,7 +2772,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-101",
+    "id": "MECH-199",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Notifications",
+    "steps": [
+      "Attempt malicious input/action on Notifications",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "MECH-200",
+    "feature": "MechanicDashboard",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Notifications spam",
+    "steps": [
+      "Attempt malicious input/action on Notifications",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-201",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1414,7 +2814,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-102",
+    "id": "JOBD-202",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1428,7 +2828,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-103",
+    "id": "JOBD-203",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Workflow Transitions logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Workflow Transitions",
+      "Call function with test data for Ensure Workflow Transitions logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-204",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Workflow Transitions success",
+    "steps": [
+      "Mock Repository/Service dependencies for Workflow Transitions",
+      "Call function with test data for Mock repository for Workflow Transitions success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-205",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1442,7 +2870,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-104",
+    "id": "JOBD-206",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1456,7 +2884,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-105",
+    "id": "JOBD-207",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Workflow Transitions correctly",
+    "steps": [
+      "Seed database with prerequisites for Workflow Transitions",
+      "Send HTTP request to endpoint related to Workflow Transitions",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-208",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Workflow Transitions",
+    "steps": [
+      "Seed database with prerequisites for Workflow Transitions",
+      "Send HTTP request to endpoint related to Workflow Transitions",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-209",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1470,7 +2926,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-106",
+    "id": "JOBD-210",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1484,7 +2940,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-107",
+    "id": "JOBD-211",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Workflow Transitions input",
+    "steps": [
+      "Render component associated with Workflow Transitions",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-212",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Workflow Transitions interaction",
+    "steps": [
+      "Render component associated with Workflow Transitions",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-213",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1498,7 +2982,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-108",
+    "id": "JOBD-214",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1512,7 +2996,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-109",
+    "id": "JOBD-215",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Workflow Transitions page works",
+    "steps": [
+      "Navigate to Workflow Transitions page via UI",
+      "Perform full user workflow for Navigation to Workflow Transitions page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-216",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Workflow Transitions",
+    "steps": [
+      "Navigate to Workflow Transitions page via UI",
+      "Perform full user workflow for Browser history maintained in Workflow Transitions",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-217",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1526,7 +3038,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-110",
+    "id": "JOBD-218",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1540,7 +3052,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-111",
+    "id": "JOBD-219",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Workflow Transitions",
+    "steps": [
+      "Attempt malicious input/action on Workflow Transitions",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-220",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Workflow Transitions spam",
+    "steps": [
+      "Attempt malicious input/action on Workflow Transitions",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-221",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1554,7 +3094,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-112",
+    "id": "JOBD-222",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1568,7 +3108,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-113",
+    "id": "JOBD-223",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Work Records (Parts/Labor) logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Work Records (Parts/Labor)",
+      "Call function with test data for Ensure Work Records (Parts/Labor) logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-224",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Work Records (Parts/Labor) success",
+    "steps": [
+      "Mock Repository/Service dependencies for Work Records (Parts/Labor)",
+      "Call function with test data for Mock repository for Work Records (Parts/Labor) success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-225",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1582,7 +3150,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-114",
+    "id": "JOBD-226",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1596,7 +3164,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-115",
+    "id": "JOBD-227",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Work Records (Parts/Labor) correctly",
+    "steps": [
+      "Seed database with prerequisites for Work Records (Parts/Labor)",
+      "Send HTTP request to endpoint related to Work Records (Parts/Labor)",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-228",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Work Records (Parts/Labor)",
+    "steps": [
+      "Seed database with prerequisites for Work Records (Parts/Labor)",
+      "Send HTTP request to endpoint related to Work Records (Parts/Labor)",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-229",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1610,7 +3206,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-116",
+    "id": "JOBD-230",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1624,7 +3220,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-117",
+    "id": "JOBD-231",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Work Records (Parts/Labor) input",
+    "steps": [
+      "Render component associated with Work Records (Parts/Labor)",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-232",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Work Records (Parts/Labor) interaction",
+    "steps": [
+      "Render component associated with Work Records (Parts/Labor)",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-233",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1638,7 +3262,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-118",
+    "id": "JOBD-234",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1652,7 +3276,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-119",
+    "id": "JOBD-235",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Work Records (Parts/Labor) page works",
+    "steps": [
+      "Navigate to Work Records (Parts/Labor) page via UI",
+      "Perform full user workflow for Navigation to Work Records (Parts/Labor) page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-236",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Work Records (Parts/Labor)",
+    "steps": [
+      "Navigate to Work Records (Parts/Labor) page via UI",
+      "Perform full user workflow for Browser history maintained in Work Records (Parts/Labor)",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-237",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1666,7 +3318,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-120",
+    "id": "JOBD-238",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1680,7 +3332,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-121",
+    "id": "JOBD-239",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Work Records (Parts/Labor)",
+    "steps": [
+      "Attempt malicious input/action on Work Records (Parts/Labor)",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-240",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Work Records (Parts/Labor) spam",
+    "steps": [
+      "Attempt malicious input/action on Work Records (Parts/Labor)",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-241",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1694,7 +3374,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-122",
+    "id": "JOBD-242",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1708,7 +3388,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-123",
+    "id": "JOBD-243",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Cost Calculations logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Cost Calculations",
+      "Call function with test data for Ensure Cost Calculations logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-244",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Cost Calculations success",
+    "steps": [
+      "Mock Repository/Service dependencies for Cost Calculations",
+      "Call function with test data for Mock repository for Cost Calculations success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-245",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1722,7 +3430,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-124",
+    "id": "JOBD-246",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1736,7 +3444,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-125",
+    "id": "JOBD-247",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Cost Calculations correctly",
+    "steps": [
+      "Seed database with prerequisites for Cost Calculations",
+      "Send HTTP request to endpoint related to Cost Calculations",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-248",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Cost Calculations",
+    "steps": [
+      "Seed database with prerequisites for Cost Calculations",
+      "Send HTTP request to endpoint related to Cost Calculations",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-249",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1750,7 +3486,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-126",
+    "id": "JOBD-250",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1764,7 +3500,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-127",
+    "id": "JOBD-251",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Cost Calculations input",
+    "steps": [
+      "Render component associated with Cost Calculations",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-252",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Cost Calculations interaction",
+    "steps": [
+      "Render component associated with Cost Calculations",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-253",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1778,7 +3542,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-128",
+    "id": "JOBD-254",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1792,7 +3556,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-129",
+    "id": "JOBD-255",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Cost Calculations page works",
+    "steps": [
+      "Navigate to Cost Calculations page via UI",
+      "Perform full user workflow for Navigation to Cost Calculations page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-256",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Cost Calculations",
+    "steps": [
+      "Navigate to Cost Calculations page via UI",
+      "Perform full user workflow for Browser history maintained in Cost Calculations",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-257",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1806,7 +3598,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-130",
+    "id": "JOBD-258",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1820,7 +3612,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-131",
+    "id": "JOBD-259",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Cost Calculations",
+    "steps": [
+      "Attempt malicious input/action on Cost Calculations",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-260",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Cost Calculations spam",
+    "steps": [
+      "Attempt malicious input/action on Cost Calculations",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-261",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1834,7 +3654,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-132",
+    "id": "JOBD-262",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1848,7 +3668,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-133",
+    "id": "JOBD-263",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Internal Comments logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Internal Comments",
+      "Call function with test data for Ensure Internal Comments logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-264",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Internal Comments success",
+    "steps": [
+      "Mock Repository/Service dependencies for Internal Comments",
+      "Call function with test data for Mock repository for Internal Comments success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-265",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1862,7 +3710,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-134",
+    "id": "JOBD-266",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -1876,7 +3724,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-135",
+    "id": "JOBD-267",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Internal Comments correctly",
+    "steps": [
+      "Seed database with prerequisites for Internal Comments",
+      "Send HTTP request to endpoint related to Internal Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-268",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Internal Comments",
+    "steps": [
+      "Seed database with prerequisites for Internal Comments",
+      "Send HTTP request to endpoint related to Internal Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-269",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1890,7 +3766,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-136",
+    "id": "JOBD-270",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -1904,7 +3780,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-137",
+    "id": "JOBD-271",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Internal Comments input",
+    "steps": [
+      "Render component associated with Internal Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-272",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Internal Comments interaction",
+    "steps": [
+      "Render component associated with Internal Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-273",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1918,7 +3822,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-138",
+    "id": "JOBD-274",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -1932,7 +3836,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-139",
+    "id": "JOBD-275",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Internal Comments page works",
+    "steps": [
+      "Navigate to Internal Comments page via UI",
+      "Perform full user workflow for Navigation to Internal Comments page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-276",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Internal Comments",
+    "steps": [
+      "Navigate to Internal Comments page via UI",
+      "Perform full user workflow for Browser history maintained in Internal Comments",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-277",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1946,7 +3878,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-140",
+    "id": "JOBD-278",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -1960,7 +3892,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-141",
+    "id": "JOBD-279",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Internal Comments",
+    "steps": [
+      "Attempt malicious input/action on Internal Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-280",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Internal Comments spam",
+    "steps": [
+      "Attempt malicious input/action on Internal Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-281",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1974,7 +3934,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-142",
+    "id": "JOBD-282",
     "feature": "JobDetails",
     "category": "Backend Unit",
     "type": "Backend",
@@ -1988,7 +3948,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-143",
+    "id": "JOBD-283",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Public Comments logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Public Comments",
+      "Call function with test data for Ensure Public Comments logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-284",
+    "feature": "JobDetails",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Public Comments success",
+    "steps": [
+      "Mock Repository/Service dependencies for Public Comments",
+      "Call function with test data for Mock repository for Public Comments success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-285",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2002,7 +3990,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-144",
+    "id": "JOBD-286",
     "feature": "JobDetails",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2016,7 +4004,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-145",
+    "id": "JOBD-287",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Public Comments correctly",
+    "steps": [
+      "Seed database with prerequisites for Public Comments",
+      "Send HTTP request to endpoint related to Public Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-288",
+    "feature": "JobDetails",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Public Comments",
+    "steps": [
+      "Seed database with prerequisites for Public Comments",
+      "Send HTTP request to endpoint related to Public Comments",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-289",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2030,7 +4046,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-146",
+    "id": "JOBD-290",
     "feature": "JobDetails",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2044,7 +4060,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-147",
+    "id": "JOBD-291",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Public Comments input",
+    "steps": [
+      "Render component associated with Public Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-292",
+    "feature": "JobDetails",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Public Comments interaction",
+    "steps": [
+      "Render component associated with Public Comments",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-293",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -2058,7 +4102,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-148",
+    "id": "JOBD-294",
     "feature": "JobDetails",
     "category": "E2E",
     "type": "E2E",
@@ -2072,7 +4116,35 @@
     "passes": false
   },
   {
-    "id": "JOBD-149",
+    "id": "JOBD-295",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Public Comments page works",
+    "steps": [
+      "Navigate to Public Comments page via UI",
+      "Perform full user workflow for Navigation to Public Comments page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-296",
+    "feature": "JobDetails",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Public Comments",
+    "steps": [
+      "Navigate to Public Comments page via UI",
+      "Perform full user workflow for Browser history maintained in Public Comments",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-297",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2086,7 +4158,7 @@
     "passes": false
   },
   {
-    "id": "JOBD-150",
+    "id": "JOBD-298",
     "feature": "JobDetails",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2100,7 +4172,35 @@
     "passes": false
   },
   {
-    "id": "CUST-151",
+    "id": "JOBD-299",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Public Comments",
+    "steps": [
+      "Attempt malicious input/action on Public Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "JOBD-300",
+    "feature": "JobDetails",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Public Comments spam",
+    "steps": [
+      "Attempt malicious input/action on Public Comments",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-301",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2114,7 +4214,7 @@
     "passes": false
   },
   {
-    "id": "CUST-152",
+    "id": "CUST-302",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2128,7 +4228,35 @@
     "passes": false
   },
   {
-    "id": "CUST-153",
+    "id": "CUST-303",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Dashboard Overview logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Dashboard Overview",
+      "Call function with test data for Ensure Dashboard Overview logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-304",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Dashboard Overview success",
+    "steps": [
+      "Mock Repository/Service dependencies for Dashboard Overview",
+      "Call function with test data for Mock repository for Dashboard Overview success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-305",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2142,7 +4270,7 @@
     "passes": false
   },
   {
-    "id": "CUST-154",
+    "id": "CUST-306",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2156,7 +4284,35 @@
     "passes": false
   },
   {
-    "id": "CUST-155",
+    "id": "CUST-307",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Dashboard Overview correctly",
+    "steps": [
+      "Seed database with prerequisites for Dashboard Overview",
+      "Send HTTP request to endpoint related to Dashboard Overview",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-308",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Dashboard Overview",
+    "steps": [
+      "Seed database with prerequisites for Dashboard Overview",
+      "Send HTTP request to endpoint related to Dashboard Overview",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-309",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2170,7 +4326,7 @@
     "passes": false
   },
   {
-    "id": "CUST-156",
+    "id": "CUST-310",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2184,7 +4340,35 @@
     "passes": false
   },
   {
-    "id": "CUST-157",
+    "id": "CUST-311",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Dashboard Overview input",
+    "steps": [
+      "Render component associated with Dashboard Overview",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-312",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Dashboard Overview interaction",
+    "steps": [
+      "Render component associated with Dashboard Overview",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-313",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2198,7 +4382,7 @@
     "passes": false
   },
   {
-    "id": "CUST-158",
+    "id": "CUST-314",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2212,7 +4396,35 @@
     "passes": false
   },
   {
-    "id": "CUST-159",
+    "id": "CUST-315",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Dashboard Overview page works",
+    "steps": [
+      "Navigate to Dashboard Overview page via UI",
+      "Perform full user workflow for Navigation to Dashboard Overview page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-316",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Dashboard Overview",
+    "steps": [
+      "Navigate to Dashboard Overview page via UI",
+      "Perform full user workflow for Browser history maintained in Dashboard Overview",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-317",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2226,7 +4438,7 @@
     "passes": false
   },
   {
-    "id": "CUST-160",
+    "id": "CUST-318",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2240,7 +4452,35 @@
     "passes": false
   },
   {
-    "id": "CUST-161",
+    "id": "CUST-319",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Dashboard Overview",
+    "steps": [
+      "Attempt malicious input/action on Dashboard Overview",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-320",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Dashboard Overview spam",
+    "steps": [
+      "Attempt malicious input/action on Dashboard Overview",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-321",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2254,7 +4494,7 @@
     "passes": false
   },
   {
-    "id": "CUST-162",
+    "id": "CUST-322",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2268,7 +4508,35 @@
     "passes": false
   },
   {
-    "id": "CUST-163",
+    "id": "CUST-323",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure My Garage List logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for My Garage List",
+      "Call function with test data for Ensure My Garage List logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-324",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for My Garage List success",
+    "steps": [
+      "Mock Repository/Service dependencies for My Garage List",
+      "Call function with test data for Mock repository for My Garage List success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-325",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2282,7 +4550,7 @@
     "passes": false
   },
   {
-    "id": "CUST-164",
+    "id": "CUST-326",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2296,7 +4564,35 @@
     "passes": false
   },
   {
-    "id": "CUST-165",
+    "id": "CUST-327",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists My Garage List correctly",
+    "steps": [
+      "Seed database with prerequisites for My Garage List",
+      "Send HTTP request to endpoint related to My Garage List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-328",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in My Garage List",
+    "steps": [
+      "Seed database with prerequisites for My Garage List",
+      "Send HTTP request to endpoint related to My Garage List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-329",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2310,7 +4606,7 @@
     "passes": false
   },
   {
-    "id": "CUST-166",
+    "id": "CUST-330",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2324,7 +4620,35 @@
     "passes": false
   },
   {
-    "id": "CUST-167",
+    "id": "CUST-331",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid My Garage List input",
+    "steps": [
+      "Render component associated with My Garage List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-332",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on My Garage List interaction",
+    "steps": [
+      "Render component associated with My Garage List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-333",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2338,7 +4662,7 @@
     "passes": false
   },
   {
-    "id": "CUST-168",
+    "id": "CUST-334",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2352,7 +4676,35 @@
     "passes": false
   },
   {
-    "id": "CUST-169",
+    "id": "CUST-335",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to My Garage List page works",
+    "steps": [
+      "Navigate to My Garage List page via UI",
+      "Perform full user workflow for Navigation to My Garage List page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-336",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in My Garage List",
+    "steps": [
+      "Navigate to My Garage List page via UI",
+      "Perform full user workflow for Browser history maintained in My Garage List",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-337",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2366,7 +4718,7 @@
     "passes": false
   },
   {
-    "id": "CUST-170",
+    "id": "CUST-338",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2380,7 +4732,35 @@
     "passes": false
   },
   {
-    "id": "CUST-171",
+    "id": "CUST-339",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access My Garage List",
+    "steps": [
+      "Attempt malicious input/action on My Garage List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-340",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on My Garage List spam",
+    "steps": [
+      "Attempt malicious input/action on My Garage List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-341",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2394,7 +4774,7 @@
     "passes": false
   },
   {
-    "id": "CUST-172",
+    "id": "CUST-342",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2408,7 +4788,35 @@
     "passes": false
   },
   {
-    "id": "CUST-173",
+    "id": "CUST-343",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Add Vehicle logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Add Vehicle",
+      "Call function with test data for Ensure Add Vehicle logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-344",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Add Vehicle success",
+    "steps": [
+      "Mock Repository/Service dependencies for Add Vehicle",
+      "Call function with test data for Mock repository for Add Vehicle success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-345",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2422,7 +4830,7 @@
     "passes": false
   },
   {
-    "id": "CUST-174",
+    "id": "CUST-346",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2436,7 +4844,35 @@
     "passes": false
   },
   {
-    "id": "CUST-175",
+    "id": "CUST-347",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Add Vehicle correctly",
+    "steps": [
+      "Seed database with prerequisites for Add Vehicle",
+      "Send HTTP request to endpoint related to Add Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-348",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Add Vehicle",
+    "steps": [
+      "Seed database with prerequisites for Add Vehicle",
+      "Send HTTP request to endpoint related to Add Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-349",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2450,7 +4886,7 @@
     "passes": false
   },
   {
-    "id": "CUST-176",
+    "id": "CUST-350",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2464,7 +4900,35 @@
     "passes": false
   },
   {
-    "id": "CUST-177",
+    "id": "CUST-351",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Add Vehicle input",
+    "steps": [
+      "Render component associated with Add Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-352",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Add Vehicle interaction",
+    "steps": [
+      "Render component associated with Add Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-353",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2478,7 +4942,7 @@
     "passes": false
   },
   {
-    "id": "CUST-178",
+    "id": "CUST-354",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2492,7 +4956,35 @@
     "passes": false
   },
   {
-    "id": "CUST-179",
+    "id": "CUST-355",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Add Vehicle page works",
+    "steps": [
+      "Navigate to Add Vehicle page via UI",
+      "Perform full user workflow for Navigation to Add Vehicle page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-356",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Add Vehicle",
+    "steps": [
+      "Navigate to Add Vehicle page via UI",
+      "Perform full user workflow for Browser history maintained in Add Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-357",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2506,7 +4998,7 @@
     "passes": false
   },
   {
-    "id": "CUST-180",
+    "id": "CUST-358",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2520,7 +5012,35 @@
     "passes": false
   },
   {
-    "id": "CUST-181",
+    "id": "CUST-359",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Add Vehicle",
+    "steps": [
+      "Attempt malicious input/action on Add Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-360",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Add Vehicle spam",
+    "steps": [
+      "Attempt malicious input/action on Add Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-361",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2534,7 +5054,7 @@
     "passes": false
   },
   {
-    "id": "CUST-182",
+    "id": "CUST-362",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2548,7 +5068,35 @@
     "passes": false
   },
   {
-    "id": "CUST-183",
+    "id": "CUST-363",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Invoice List logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Invoice List",
+      "Call function with test data for Ensure Invoice List logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-364",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Invoice List success",
+    "steps": [
+      "Mock Repository/Service dependencies for Invoice List",
+      "Call function with test data for Mock repository for Invoice List success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-365",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2562,7 +5110,7 @@
     "passes": false
   },
   {
-    "id": "CUST-184",
+    "id": "CUST-366",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2576,7 +5124,35 @@
     "passes": false
   },
   {
-    "id": "CUST-185",
+    "id": "CUST-367",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Invoice List correctly",
+    "steps": [
+      "Seed database with prerequisites for Invoice List",
+      "Send HTTP request to endpoint related to Invoice List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-368",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Invoice List",
+    "steps": [
+      "Seed database with prerequisites for Invoice List",
+      "Send HTTP request to endpoint related to Invoice List",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-369",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2590,7 +5166,7 @@
     "passes": false
   },
   {
-    "id": "CUST-186",
+    "id": "CUST-370",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2604,7 +5180,35 @@
     "passes": false
   },
   {
-    "id": "CUST-187",
+    "id": "CUST-371",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Invoice List input",
+    "steps": [
+      "Render component associated with Invoice List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-372",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Invoice List interaction",
+    "steps": [
+      "Render component associated with Invoice List",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-373",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2618,7 +5222,7 @@
     "passes": false
   },
   {
-    "id": "CUST-188",
+    "id": "CUST-374",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2632,7 +5236,35 @@
     "passes": false
   },
   {
-    "id": "CUST-189",
+    "id": "CUST-375",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Invoice List page works",
+    "steps": [
+      "Navigate to Invoice List page via UI",
+      "Perform full user workflow for Navigation to Invoice List page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-376",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Invoice List",
+    "steps": [
+      "Navigate to Invoice List page via UI",
+      "Perform full user workflow for Browser history maintained in Invoice List",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-377",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2646,7 +5278,7 @@
     "passes": false
   },
   {
-    "id": "CUST-190",
+    "id": "CUST-378",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2660,7 +5292,35 @@
     "passes": false
   },
   {
-    "id": "CUST-191",
+    "id": "CUST-379",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Invoice List",
+    "steps": [
+      "Attempt malicious input/action on Invoice List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-380",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Invoice List spam",
+    "steps": [
+      "Attempt malicious input/action on Invoice List",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-381",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2674,7 +5334,7 @@
     "passes": false
   },
   {
-    "id": "CUST-192",
+    "id": "CUST-382",
     "feature": "CustomerPortal",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2688,7 +5348,35 @@
     "passes": false
   },
   {
-    "id": "CUST-193",
+    "id": "CUST-383",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Support Ticket logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Support Ticket",
+      "Call function with test data for Ensure Support Ticket logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-384",
+    "feature": "CustomerPortal",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Support Ticket success",
+    "steps": [
+      "Mock Repository/Service dependencies for Support Ticket",
+      "Call function with test data for Mock repository for Support Ticket success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-385",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2702,7 +5390,7 @@
     "passes": false
   },
   {
-    "id": "CUST-194",
+    "id": "CUST-386",
     "feature": "CustomerPortal",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2716,7 +5404,35 @@
     "passes": false
   },
   {
-    "id": "CUST-195",
+    "id": "CUST-387",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Support Ticket correctly",
+    "steps": [
+      "Seed database with prerequisites for Support Ticket",
+      "Send HTTP request to endpoint related to Support Ticket",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-388",
+    "feature": "CustomerPortal",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Support Ticket",
+    "steps": [
+      "Seed database with prerequisites for Support Ticket",
+      "Send HTTP request to endpoint related to Support Ticket",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-389",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2730,7 +5446,7 @@
     "passes": false
   },
   {
-    "id": "CUST-196",
+    "id": "CUST-390",
     "feature": "CustomerPortal",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2744,7 +5460,35 @@
     "passes": false
   },
   {
-    "id": "CUST-197",
+    "id": "CUST-391",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Support Ticket input",
+    "steps": [
+      "Render component associated with Support Ticket",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-392",
+    "feature": "CustomerPortal",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Support Ticket interaction",
+    "steps": [
+      "Render component associated with Support Ticket",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-393",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2758,7 +5502,7 @@
     "passes": false
   },
   {
-    "id": "CUST-198",
+    "id": "CUST-394",
     "feature": "CustomerPortal",
     "category": "E2E",
     "type": "E2E",
@@ -2772,7 +5516,35 @@
     "passes": false
   },
   {
-    "id": "CUST-199",
+    "id": "CUST-395",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Support Ticket page works",
+    "steps": [
+      "Navigate to Support Ticket page via UI",
+      "Perform full user workflow for Navigation to Support Ticket page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-396",
+    "feature": "CustomerPortal",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Support Ticket",
+    "steps": [
+      "Navigate to Support Ticket page via UI",
+      "Perform full user workflow for Browser history maintained in Support Ticket",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-397",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2786,7 +5558,7 @@
     "passes": false
   },
   {
-    "id": "CUST-200",
+    "id": "CUST-398",
     "feature": "CustomerPortal",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2800,7 +5572,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-201",
+    "id": "CUST-399",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Support Ticket",
+    "steps": [
+      "Attempt malicious input/action on Support Ticket",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "CUST-400",
+    "feature": "CustomerPortal",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Support Ticket spam",
+    "steps": [
+      "Attempt malicious input/action on Support Ticket",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-401",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2814,7 +5614,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-202",
+    "id": "VEHI-402",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2828,7 +5628,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-203",
+    "id": "VEHI-403",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Create Vehicle logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Create Vehicle",
+      "Call function with test data for Ensure Create Vehicle logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-404",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Create Vehicle success",
+    "steps": [
+      "Mock Repository/Service dependencies for Create Vehicle",
+      "Call function with test data for Mock repository for Create Vehicle success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-405",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2842,7 +5670,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-204",
+    "id": "VEHI-406",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2856,7 +5684,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-205",
+    "id": "VEHI-407",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Create Vehicle correctly",
+    "steps": [
+      "Seed database with prerequisites for Create Vehicle",
+      "Send HTTP request to endpoint related to Create Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-408",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Create Vehicle",
+    "steps": [
+      "Seed database with prerequisites for Create Vehicle",
+      "Send HTTP request to endpoint related to Create Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-409",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2870,7 +5726,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-206",
+    "id": "VEHI-410",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -2884,7 +5740,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-207",
+    "id": "VEHI-411",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Create Vehicle input",
+    "steps": [
+      "Render component associated with Create Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-412",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Create Vehicle interaction",
+    "steps": [
+      "Render component associated with Create Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-413",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -2898,7 +5782,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-208",
+    "id": "VEHI-414",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -2912,7 +5796,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-209",
+    "id": "VEHI-415",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Create Vehicle page works",
+    "steps": [
+      "Navigate to Create Vehicle page via UI",
+      "Perform full user workflow for Navigation to Create Vehicle page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-416",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Create Vehicle",
+    "steps": [
+      "Navigate to Create Vehicle page via UI",
+      "Perform full user workflow for Browser history maintained in Create Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-417",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2926,7 +5838,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-210",
+    "id": "VEHI-418",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -2940,7 +5852,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-211",
+    "id": "VEHI-419",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Create Vehicle",
+    "steps": [
+      "Attempt malicious input/action on Create Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-420",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Create Vehicle spam",
+    "steps": [
+      "Attempt malicious input/action on Create Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-421",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2954,7 +5894,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-212",
+    "id": "VEHI-422",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -2968,7 +5908,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-213",
+    "id": "VEHI-423",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Update Vehicle logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Update Vehicle",
+      "Call function with test data for Ensure Update Vehicle logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-424",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Update Vehicle success",
+    "steps": [
+      "Mock Repository/Service dependencies for Update Vehicle",
+      "Call function with test data for Mock repository for Update Vehicle success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-425",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2982,7 +5950,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-214",
+    "id": "VEHI-426",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -2996,7 +5964,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-215",
+    "id": "VEHI-427",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Update Vehicle correctly",
+    "steps": [
+      "Seed database with prerequisites for Update Vehicle",
+      "Send HTTP request to endpoint related to Update Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-428",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Update Vehicle",
+    "steps": [
+      "Seed database with prerequisites for Update Vehicle",
+      "Send HTTP request to endpoint related to Update Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-429",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3010,7 +6006,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-216",
+    "id": "VEHI-430",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3024,7 +6020,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-217",
+    "id": "VEHI-431",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Update Vehicle input",
+    "steps": [
+      "Render component associated with Update Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-432",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Update Vehicle interaction",
+    "steps": [
+      "Render component associated with Update Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-433",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3038,7 +6062,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-218",
+    "id": "VEHI-434",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3052,7 +6076,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-219",
+    "id": "VEHI-435",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Update Vehicle page works",
+    "steps": [
+      "Navigate to Update Vehicle page via UI",
+      "Perform full user workflow for Navigation to Update Vehicle page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-436",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Update Vehicle",
+    "steps": [
+      "Navigate to Update Vehicle page via UI",
+      "Perform full user workflow for Browser history maintained in Update Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-437",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -3066,7 +6118,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-220",
+    "id": "VEHI-438",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -3080,7 +6132,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-221",
+    "id": "VEHI-439",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Update Vehicle",
+    "steps": [
+      "Attempt malicious input/action on Update Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-440",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Update Vehicle spam",
+    "steps": [
+      "Attempt malicious input/action on Update Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-441",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -3094,7 +6174,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-222",
+    "id": "VEHI-442",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -3108,7 +6188,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-223",
+    "id": "VEHI-443",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Search by VIN logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Search by VIN",
+      "Call function with test data for Ensure Search by VIN logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-444",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Search by VIN success",
+    "steps": [
+      "Mock Repository/Service dependencies for Search by VIN",
+      "Call function with test data for Mock repository for Search by VIN success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-445",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -3122,7 +6230,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-224",
+    "id": "VEHI-446",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -3136,7 +6244,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-225",
+    "id": "VEHI-447",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Search by VIN correctly",
+    "steps": [
+      "Seed database with prerequisites for Search by VIN",
+      "Send HTTP request to endpoint related to Search by VIN",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-448",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Search by VIN",
+    "steps": [
+      "Seed database with prerequisites for Search by VIN",
+      "Send HTTP request to endpoint related to Search by VIN",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-449",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3150,7 +6286,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-226",
+    "id": "VEHI-450",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3164,7 +6300,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-227",
+    "id": "VEHI-451",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Search by VIN input",
+    "steps": [
+      "Render component associated with Search by VIN",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-452",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Search by VIN interaction",
+    "steps": [
+      "Render component associated with Search by VIN",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-453",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3178,7 +6342,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-228",
+    "id": "VEHI-454",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3192,7 +6356,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-229",
+    "id": "VEHI-455",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Search by VIN page works",
+    "steps": [
+      "Navigate to Search by VIN page via UI",
+      "Perform full user workflow for Navigation to Search by VIN page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-456",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Search by VIN",
+    "steps": [
+      "Navigate to Search by VIN page via UI",
+      "Perform full user workflow for Browser history maintained in Search by VIN",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-457",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -3206,7 +6398,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-230",
+    "id": "VEHI-458",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -3220,7 +6412,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-231",
+    "id": "VEHI-459",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Search by VIN",
+    "steps": [
+      "Attempt malicious input/action on Search by VIN",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-460",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Search by VIN spam",
+    "steps": [
+      "Attempt malicious input/action on Search by VIN",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-461",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -3234,7 +6454,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-232",
+    "id": "VEHI-462",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -3248,7 +6468,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-233",
+    "id": "VEHI-463",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Vehicle History logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Vehicle History",
+      "Call function with test data for Ensure Vehicle History logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-464",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Vehicle History success",
+    "steps": [
+      "Mock Repository/Service dependencies for Vehicle History",
+      "Call function with test data for Mock repository for Vehicle History success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-465",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -3262,7 +6510,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-234",
+    "id": "VEHI-466",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -3276,7 +6524,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-235",
+    "id": "VEHI-467",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Vehicle History correctly",
+    "steps": [
+      "Seed database with prerequisites for Vehicle History",
+      "Send HTTP request to endpoint related to Vehicle History",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-468",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Vehicle History",
+    "steps": [
+      "Seed database with prerequisites for Vehicle History",
+      "Send HTTP request to endpoint related to Vehicle History",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-469",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3290,7 +6566,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-236",
+    "id": "VEHI-470",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3304,7 +6580,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-237",
+    "id": "VEHI-471",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Vehicle History input",
+    "steps": [
+      "Render component associated with Vehicle History",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-472",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Vehicle History interaction",
+    "steps": [
+      "Render component associated with Vehicle History",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-473",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3318,7 +6622,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-238",
+    "id": "VEHI-474",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3332,7 +6636,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-239",
+    "id": "VEHI-475",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Vehicle History page works",
+    "steps": [
+      "Navigate to Vehicle History page via UI",
+      "Perform full user workflow for Navigation to Vehicle History page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-476",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Vehicle History",
+    "steps": [
+      "Navigate to Vehicle History page via UI",
+      "Perform full user workflow for Browser history maintained in Vehicle History",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-477",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -3346,7 +6678,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-240",
+    "id": "VEHI-478",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -3360,7 +6692,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-241",
+    "id": "VEHI-479",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Vehicle History",
+    "steps": [
+      "Attempt malicious input/action on Vehicle History",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-480",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Vehicle History spam",
+    "steps": [
+      "Attempt malicious input/action on Vehicle History",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-481",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -3374,7 +6734,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-242",
+    "id": "VEHI-482",
     "feature": "VehicleManagement",
     "category": "Backend Unit",
     "type": "Backend",
@@ -3388,7 +6748,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-243",
+    "id": "VEHI-483",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Ensure Archive Vehicle logic returns correct entity",
+    "steps": [
+      "Mock Repository/Service dependencies for Archive Vehicle",
+      "Call function with test data for Ensure Archive Vehicle logic returns correct entity",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-484",
+    "feature": "VehicleManagement",
+    "category": "Backend Unit",
+    "type": "Backend",
+    "description": "Mock repository for Archive Vehicle success",
+    "steps": [
+      "Mock Repository/Service dependencies for Archive Vehicle",
+      "Call function with test data for Mock repository for Archive Vehicle success",
+      "Assert return value expectation",
+      "Verify Zod schema validation for inputs"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-485",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -3402,7 +6790,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-244",
+    "id": "VEHI-486",
     "feature": "VehicleManagement",
     "category": "Backend Integration",
     "type": "Backend",
@@ -3416,7 +6804,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-245",
+    "id": "VEHI-487",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Database persists Archive Vehicle correctly",
+    "steps": [
+      "Seed database with prerequisites for Archive Vehicle",
+      "Send HTTP request to endpoint related to Archive Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-488",
+    "feature": "VehicleManagement",
+    "category": "Backend Integration",
+    "type": "Backend",
+    "description": "Relations are preserved in Archive Vehicle",
+    "steps": [
+      "Seed database with prerequisites for Archive Vehicle",
+      "Send HTTP request to endpoint related to Archive Vehicle",
+      "Assert response status and body",
+      "Verify database state change"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-489",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3430,7 +6846,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-246",
+    "id": "VEHI-490",
     "feature": "VehicleManagement",
     "category": "Frontend Unit",
     "type": "Frontend",
@@ -3444,7 +6860,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-247",
+    "id": "VEHI-491",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Display error message for invalid Archive Vehicle input",
+    "steps": [
+      "Render component associated with Archive Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-492",
+    "feature": "VehicleManagement",
+    "category": "Frontend Unit",
+    "type": "Frontend",
+    "description": "Button state changes on Archive Vehicle interaction",
+    "steps": [
+      "Render component associated with Archive Vehicle",
+      "Simulate user interaction (click/type)",
+      "Assert UI updates (text/color/visibility)",
+      "Verify Zod client-side validation triggers"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-493",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3458,7 +6902,7 @@
     "passes": false
   },
   {
-    "id": "VEHI-248",
+    "id": "VEHI-494",
     "feature": "VehicleManagement",
     "category": "E2E",
     "type": "E2E",
@@ -3472,7 +6916,35 @@
     "passes": false
   },
   {
-    "id": "VEHI-249",
+    "id": "VEHI-495",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Navigation to Archive Vehicle page works",
+    "steps": [
+      "Navigate to Archive Vehicle page via UI",
+      "Perform full user workflow for Navigation to Archive Vehicle page works",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-496",
+    "feature": "VehicleManagement",
+    "category": "E2E",
+    "type": "E2E",
+    "description": "Browser history maintained in Archive Vehicle",
+    "steps": [
+      "Navigate to Archive Vehicle page via UI",
+      "Perform full user workflow for Browser history maintained in Archive Vehicle",
+      "Verify persistence across screens",
+      "Check final state in UI"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-497",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
@@ -3486,11 +6958,39 @@
     "passes": false
   },
   {
-    "id": "VEHI-250",
+    "id": "VEHI-498",
     "feature": "VehicleManagement",
     "category": "Security & Edge Case",
     "type": "Security",
     "description": "XSS payload in Archive Vehicle input sanitized",
+    "steps": [
+      "Attempt malicious input/action on Archive Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-499",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Unauthorized user cannot access Archive Vehicle",
+    "steps": [
+      "Attempt malicious input/action on Archive Vehicle",
+      "Verify system rejects/sanitizes input",
+      "Assert 403/401 or clean output",
+      "Check logs for security alert (optional)"
+    ],
+    "passes": false
+  },
+  {
+    "id": "VEHI-500",
+    "feature": "VehicleManagement",
+    "category": "Security & Edge Case",
+    "type": "Security",
+    "description": "Rate limiting triggers on Archive Vehicle spam",
     "steps": [
       "Attempt malicious input/action on Archive Vehicle",
       "Verify system rejects/sanitizes input",
