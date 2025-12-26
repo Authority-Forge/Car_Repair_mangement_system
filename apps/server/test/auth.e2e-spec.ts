@@ -50,4 +50,35 @@ describe('AuthController (e2e)', () => {
             .send({ email: 'test@example.com' })
             .expect(400);
     });
+
+    // AUTH-022: Register Success
+    it('/auth/register (POST) - Success', async () => {
+        return request(app.getHttpServer())
+            .post('/auth/register')
+            .send({
+                email: 'newuser@example.com',
+                password: 'Password123!',
+                fullName: 'New User',
+                role: 'Customer'
+            })
+            .expect(201)
+            .expect((res) => {
+                expect(res.body).toHaveProperty('access_token');
+                expect(res.body.user.email).toBe('newuser@example.com');
+                expect(res.body.user.fullName).toBe('New User');
+            });
+    });
+
+    // AUTH-023: Register Fail - Weak Password
+    it('/auth/register (POST) - Fail Weak Password', () => {
+        return request(app.getHttpServer())
+            .post('/auth/register')
+            .send({
+                email: 'weak@example.com',
+                password: 'weak',
+                fullName: 'Weak Pwd',
+                role: 'Customer'
+            })
+            .expect(400);
+    });
 });

@@ -1,55 +1,104 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable, UnauthorizedException, BadRequestException, Inject } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { LoginDto, LoginSchema } from './dto/login.dto';
+import { RegisterDto } from './dto/register.dto';
 import * as bcrypt from 'bcrypt';
-
-// Mock DB for now or inject Drizzle Service later
-// For the purpose of "Login Feature" we will implement the logic.
+import { DRIZZLE } from '../../database/database.module';
+import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
+import * as schema from '../../database/schema';
+import { eq } from 'drizzle-orm';
 
 @Injectable()
 export class AuthService {
-    constructor(private jwtService: JwtService) { }
+    constructor(
+        private jwtService: JwtService,
+        @Inject(DRIZZLE) private db: PostgresJsDatabase<typeof schema>
+    ) { }
 
     async validateUser(email: string, pass: string): Promise<any> {
-        // In a real app, this would query the DB
-        // const user = await db.select().from(users).where(eq(users.email, email));
-
-        // MOCK DATA for initial dev (User AUTH-001 tests will mock this service method anyway)
-        // We can assume we have a findByEmail method helper
-
-        // Placeholder implementation to allow Controller compilation:
-        if (email === 'test@example.com' && pass === 'password') {
-            const { password, ...result } = { id: 1, email, role: 'Mechanic', password: 'password' };
+        const user = await this.db.query.users.findFirst({
+            where: eq(schema.users.email, email)
+        });
+        if (user && await bcrypt.compare(pass, user.passwordHash)) {
+            const { passwordHash, ...result } = user;
             return result;
         }
-
         return null;
     }
 
     async login(loginDto: LoginDto) {
-        // Validate again just in case (though Controller does it via Pipe)
-        const validation = LoginSchema.safeParse(loginDto);
-        if (!validation.success) {
-            throw new Error('Validation failed'); // Should be caught by Pipe
+        // Validation handled by Pipe, but explicit safeParse if needed.
+
+        const user = await this.db.query.users.findFirst({
+            where: eq(schema.users.email, loginDto.email)
+        });
+
+        if (!user || !(await bcrypt.compare(loginDto.password, user.passwordHash))) {
+            throw new UnauthorizedException('Invalid credentials');
         }
 
-        // Logic to verify user
-        // In real flow: validateUser is called by LocalStrategy usually, OR we do it manually here.
-        // Let's do manual for simplicity with DTO
+        // Ensure role matches?
+        if (loginDto.role && user.role !== loginDto.role) {
+            throw new UnauthorizedException('Role mismatch');
+        }
 
-        // Note: In production we'd look up the user by email, compare hash.
-        // For this MVP step 1: 
-        // const user = await this.findByEmail(loginDto.email);
-        // const isMatch = await bcrypt.compare(loginDto.password, user.passwordHash);
+        return this.generateToken(user);
+    }
 
-        // Returning dummy JWT
-        const payload = { email: loginDto.email, sub: 1, role: loginDto.role };
+    async register(registerDto: RegisterDto) {
+        // Check duplicate
+        const existing = await this.db.query.users.findFirst({ where: eq(schema.users.email, registerDto.email) });
+        if (existing) {
+            throw new BadRequestException('User already exists');
+        }
+
+        const hashedPassword = await bcrypt.hash(registerDto.password, 10);
+
+        const [newUser] = await this.db.insert(schema.users).values({
+            email: registerDto.email,
+            passwordHash: hashedPassword,
+            fullName: registerDto.fullName,
+            role: registerDto.role,
+        }).returning();
+
+        return this.generateToken(newUser);
+    }
+
+    async getProfile(userId: number) {
+        const user = await this.db.query.users.findFirst({
+            where: eq(schema.users.id, userId)
+        });
+        if (!user) {
+            throw new UnauthorizedException('User not found');
+        }
+        const { passwordHash, ...result } = user;
+        return result;
+    }
+
+    async updateProfile(userId: number, updateDto: any) {
+        const [updatedUser] = await this.db.update(schema.users)
+            .set(updateDto)
+            .where(eq(schema.users.id, userId))
+            .returning();
+
+        if (!updatedUser) {
+            throw new BadRequestException('Failed to update profile');
+        }
+
+        const { passwordHash, ...result } = updatedUser;
+        return result;
+    }
+
+    private generateToken(user: any) {
+        const payload = { email: user.email, sub: user.id, role: user.role };
         return {
             access_token: this.jwtService.sign(payload),
             user: {
-                email: loginDto.email,
-                role: loginDto.role
-            }
+                id: user.id,
+                email: user.email,
+                fullName: user.fullName,
+                role: user.role,
+            },
         };
     }
 }

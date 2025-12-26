@@ -1,0 +1,177 @@
+  console.log
+    Fetched Mech Users: Result(1) [ { id: 1 } ]
+
+      at Object.<anonymous> (data-integration.e2e-spec.ts:43:17)
+
+  console.log
+    Fetched Cust Users: Result(1) [ { id: 2 } ]
+
+      at Object.<anonymous> (data-integration.e2e-spec.ts:44:17)
+
+  console.log
+    Mech Login Response: 201 {
+      access_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lY2hAdGVzdC5jb20iLCJzdWIiOjEsInJvbGUiOiJNZWNoYW5pYyIsImlhdCI6MTc2NjczNjA1NCwiZXhwIjoxNzY2NzM5NjU0fQ.Vly0AeFkfuTRXHq5-9R6TVFOAOOYrcU399BIVU68wXU',
+      user: {
+        id: 1,
+        email: 'mech@test.com',
+        fullName: 'Mike Mechanic',
+        role: 'Mechanic'
+      }
+    }
+
+      at Object.<anonymous> (data-integration.e2e-spec.ts:58:17)
+
+  console.log
+    Cust Login Response: 201 {
+      access_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN1c3RAdGVzdC5jb20iLCJzdWIiOjIsInJvbGUiOiJDdXN0b21lciIsImlhdCI6MTc2NjczNjA1NCwiZXhwIjoxNzY2NzM5NjU0fQ.yLJ4UkSMWbXyKZMS6gZsW3u5uBy_tH3ci1dXp54LHIs',
+      user: {
+        id: 2,
+        email: 'cust@test.com',
+        fullName: 'John Doe',
+        role: 'Customer'
+      }
+    }
+
+      at Object.<anonymous> (data-integration.e2e-spec.ts:65:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+  console.log
+    RolesGuard User: {"userId":1,"email":"mech@test.com","role":"Mechanic"} Required: [ 'Mechanic', 'Admin' ]
+
+      at RolesGuard.canActivate (../src/common/guards/roles.guard.ts:18:17)
+
+FAIL test/data-integration.e2e-spec.ts (11.818 s)
+  Data Integration (E2E)
+    Feature: Job Management (Backend Integration)
+      ΓêÜ DATA-017: POST /jobs - Create Job with Valid Data (320 ms)
+      ΓêÜ DATA-006: POST /jobs - Fail Missing VehicleID (Strict Zod) (11 ms)
+      ΓêÜ DATA-005: POST /jobs - Fail Invalid Status Enum (9 ms)
+      ΓêÜ DATA-013: GET /jobs/:id - Retrieve Job with Relations (162 ms)
+      ΓêÜ DATA-015: GET /jobs/:id - Not Found (154 ms)
+      ΓêÜ DATA-016: GET /jobs/:id - Validate ID format (7 ms)
+    Feature: Work Records & Notes (Integration)
+      ├ù DATA-019: POST /jobs/:id/records - Add Work Record (10 ms)
+      ΓêÜ DATA-007: POST /jobs/:id/records - Fail Negative Qty (8 ms)
+      ├ù DATA-021: POST /jobs/:id/notes - Add Internal Note (8 ms)
+      ├ù DATA-044: POST /jobs/:id/notes - XSS Sanitization Check (8 ms)
+    Feature: Security & PII (Security)
+      ΓêÜ DATA-041: IDOR - Customer cannot view other customer job
+      ΓêÜ DATA-042: PII - Error responses should not leak internal paths/DB details (145 ms)
+
+  ΓùÅ Data Integration (E2E) ΓÇ║ Feature: Work Records & Notes (Integration) ΓÇ║ DATA-019: POST /jobs/:id/records - Add Work Record
+
+    expected 201 "Created", got 400 "Bad Request"
+
+      162 |                     total: 200
+      163 |                 })
+    > 164 |                 .expect(201)
+          |                  ^
+      165 |                 .then(res => {
+      166 |                     expect(res.body.id).toBeDefined();
+      167 |                     expect(Number(res.body.total)).toBe(200);
+
+      at Object.<anonymous> (data-integration.e2e-spec.ts:164:18)
+      ----
+      at Test._assertStatus (../../../node_modules/supertest/lib/test.js:252:14)
+      at ../../../node_modules/supertest/lib/test.js:308:13
+      at Test._assertFunction (../../../node_modules/supertest/lib/test.js:285:13)
+      at Test.assert (../../../node_modules/supertest/lib/test.js:164:23)
+      at Server.localAssert (../../../node_modules/supertest/lib/test.js:120:14)
+
+  ΓùÅ Data Integration (E2E) ΓÇ║ Feature: Work Records & Notes (Integration) ΓÇ║ DATA-021: POST /jobs/:id/notes - Add Internal Note
+
+    expected 201 "Created", got 400 "Bad Request"
+
+      191 |                     type: 'Internal'
+      192 |                 })
+    > 193 |                 .expect(201)
+          |                  ^
+      194 |                 .then(res => {
+      195 |                     expect(res.body.content).toContain('diagnostics');
+      196 |                 });
+
+      at Object.<anonymous> (data-integration.e2e-spec.ts:193:18)
+      ----
+      at Test._assertStatus (../../../node_modules/supertest/lib/test.js:252:14)
+      at ../../../node_modules/supertest/lib/test.js:308:13
+      at Test._assertFunction (../../../node_modules/supertest/lib/test.js:285:13)
+      at Test.assert (../../../node_modules/supertest/lib/test.js:164:23)
+      at Server.localAssert (../../../node_modules/supertest/lib/test.js:120:14)
+
+  ΓùÅ Data Integration (E2E) ΓÇ║ Feature: Work Records & Notes (Integration) ΓÇ║ DATA-044: POST /jobs/:id/notes - XSS Sanitization Check
+
+    expected 201 "Created", got 400 "Bad Request"
+
+      206 |                     type: 'Internal'
+      207 |                 })
+    > 208 |                 .expect(201) // Should accept but sanitize on read? Or reject?
+          |                  ^
+      209 |             // Ideally, we store as is but ensure frontend doesn't render HTML.
+      210 |             // Or backend validates/strips. Let's assume text storage is safe, standard is to escape on output.
+      211 |             // But specifically for PII:
+
+      at Object.<anonymous> (data-integration.e2e-spec.ts:208:18)
+      ----
+      at Test._assertStatus (../../../node_modules/supertest/lib/test.js:252:14)
+      at ../../../node_modules/supertest/lib/test.js:308:13
+      at Test._assertFunction (../../../node_modules/supertest/lib/test.js:285:13)
+      at Test.assert (../../../node_modules/supertest/lib/test.js:164:23)
+      at Server.localAssert (../../../node_modules/supertest/lib/test.js:120:14)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 9 passed, 12 total
+Snapshots:   0 total
+Time:        12.086 s
+Ran all test suites matching /test\\data-integration.e2e-spec.ts/i.
+Jest did not exit one second after the test run has completed.
+
+'This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.

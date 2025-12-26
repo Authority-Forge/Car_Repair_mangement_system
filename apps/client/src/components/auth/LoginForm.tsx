@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Input } from "../ui/Input";
 import { Button } from "../ui/Button";
-import { api } from "@/lib/api";
+import { api } from "../../lib/api";
 import { useNavigate } from "react-router-dom";
 
 // Schema matching Backend DTO
@@ -25,7 +25,6 @@ export function LoginForm() {
         register,
         handleSubmit,
         watch,
-        setValue,
         formState: { errors },
     } = useForm<LoginFormValues>({
         resolver: zodResolver(loginSchema),

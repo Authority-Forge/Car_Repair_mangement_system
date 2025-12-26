@@ -1,11 +1,11 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { LoginForm } from './LoginForm';
 import { BrowserRouter } from 'react-router-dom';
-import { api } from '@/lib/api';
+import { api } from '../../lib/api';
 import { vi } from 'vitest';
 
 // Mock API and Navigation
-vi.mock('@/lib/api');
+vi.mock('../../lib/api');
 const mockApiPost = api.post as any;
 
 const renderComponent = () => {
