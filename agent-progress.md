@@ -24,5 +24,6 @@
 - None currently.
 
 ## 📝 Notes
+- **PROTOCOL**: Always create a new branch (`feat/ID-...`) for each feature. Never commit directly to main.
 - `feature_list.json` serves as the source of truth for test coverage.
 - All new features must have strictly typed Zod schemas.
