@@ -66,7 +66,11 @@ async function main() {
                 updated_at TIMESTAMP DEFAULT NOW()
             );
         `;
-        console.log('Created users table.');
+        // Password Reset Additions
+        await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS reset_token TEXT`;
+        await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS reset_token_expires TIMESTAMP`;
+
+        console.log('Migration completed successfully!');
 
         await sql`
             CREATE TABLE IF NOT EXISTS vehicles (

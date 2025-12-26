@@ -3,6 +3,7 @@ import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import * as schema from '../../database/schema';
+import { PasswordResetRequestDto, PasswordResetDto } from './dto/password-reset.dto';
 export declare class AuthService {
     private jwtService;
     private db;
@@ -31,6 +32,8 @@ export declare class AuthService {
         email: string;
         role: "Mechanic" | "Advisor" | "Customer" | "Admin";
         fullName: string;
+        resetToken: string;
+        resetTokenExpires: Date;
         createdAt: Date;
         updatedAt: Date;
     }>;
@@ -39,8 +42,16 @@ export declare class AuthService {
         email: string;
         role: "Mechanic" | "Advisor" | "Customer" | "Admin";
         fullName: string;
+        resetToken: string;
+        resetTokenExpires: Date;
         createdAt: Date;
         updatedAt: Date;
+    }>;
+    requestPasswordReset(dto: PasswordResetRequestDto): Promise<{
+        message: string;
+    }>;
+    resetPassword(dto: PasswordResetDto): Promise<{
+        message: string;
     }>;
     private generateToken;
 }

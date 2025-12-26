@@ -40,6 +40,8 @@ export declare class MechanicController {
             passwordHash: string;
             role: "Mechanic" | "Advisor" | "Customer" | "Admin";
             fullName: string;
+            resetToken: string;
+            resetTokenExpires: Date;
             createdAt: Date;
             updatedAt: Date;
         };
@@ -49,6 +51,8 @@ export declare class MechanicController {
             passwordHash: string;
             role: "Mechanic" | "Advisor" | "Customer" | "Admin";
             fullName: string;
+            resetToken: string;
+            resetTokenExpires: Date;
             createdAt: Date;
             updatedAt: Date;
         };
@@ -82,16 +86,6 @@ export declare class MechanicController {
         advisorId: number;
         status: "In Progress" | "Waiting on Parts" | "Completed" | "Invoiced" | "Scheduled";
         description: string;
-        workRecords: {
-            id: number;
-            createdAt: Date;
-            description: string;
-            type: "Labor" | "Part";
-            jobId: number;
-            quantity: string;
-            rate: string;
-            total: string;
-        }[];
         vehicle: {
             id: number;
             createdAt: Date;
@@ -112,6 +106,8 @@ export declare class MechanicController {
             passwordHash: string;
             role: "Mechanic" | "Advisor" | "Customer" | "Admin";
             fullName: string;
+            resetToken: string;
+            resetTokenExpires: Date;
             createdAt: Date;
             updatedAt: Date;
         };
@@ -121,14 +117,26 @@ export declare class MechanicController {
             passwordHash: string;
             role: "Mechanic" | "Advisor" | "Customer" | "Admin";
             fullName: string;
+            resetToken: string;
+            resetTokenExpires: Date;
             createdAt: Date;
             updatedAt: Date;
         };
+        workRecords: {
+            id: number;
+            createdAt: Date;
+            description: string;
+            jobId: number;
+            type: "Labor" | "Part";
+            quantity: string;
+            rate: string;
+            total: string;
+        }[];
         notes: {
             id: number;
             createdAt: Date;
-            type: "Customer" | "Internal";
             jobId: number;
+            type: "Customer" | "Internal";
             userId: number;
             content: string;
             user: {
@@ -137,6 +145,8 @@ export declare class MechanicController {
                 passwordHash: string;
                 role: "Mechanic" | "Advisor" | "Customer" | "Admin";
                 fullName: string;
+                resetToken: string;
+                resetTokenExpires: Date;
                 createdAt: Date;
                 updatedAt: Date;
             };
@@ -146,8 +156,8 @@ export declare class MechanicController {
         id: number;
         createdAt: Date;
         description: string;
-        type: "Labor" | "Part";
         jobId: number;
+        type: "Labor" | "Part";
         quantity: string;
         rate: string;
         total: string;
@@ -155,8 +165,8 @@ export declare class MechanicController {
     addNote(id: number, dto: CreateNoteDto, req: any): Promise<{
         id: number;
         createdAt: Date;
-        type: "Customer" | "Internal";
         jobId: number;
+        type: "Customer" | "Internal";
         userId: number;
         content: string;
     }>;

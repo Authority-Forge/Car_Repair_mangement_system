@@ -9,6 +9,8 @@ exports.users = (0, pg_core_1.pgTable)('users', {
     passwordHash: (0, pg_core_1.text)('password_hash').notNull(),
     role: (0, exports.userRoleEnum)('role').notNull(),
     fullName: (0, pg_core_1.text)('full_name').notNull(),
+    resetToken: (0, pg_core_1.text)('reset_token'),
+    resetTokenExpires: (0, pg_core_1.timestamp)('reset_token_expires'),
     createdAt: (0, pg_core_1.timestamp)('created_at').defaultNow(),
     updatedAt: (0, pg_core_1.timestamp)('updated_at').defaultNow(),
 });

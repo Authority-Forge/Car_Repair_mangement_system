@@ -8,6 +8,8 @@ export const users = pgTable('users', {
     passwordHash: text('password_hash').notNull(),
     role: userRoleEnum('role').notNull(),
     fullName: text('full_name').notNull(),
+    resetToken: text('reset_token'),
+    resetTokenExpires: timestamp('reset_token_expires'),
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').defaultNow(),
 });

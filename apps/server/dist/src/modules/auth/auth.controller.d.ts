@@ -2,6 +2,7 @@ import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 import { UpdateProfileDto } from './dto/update-profile.dto';
+import { PasswordResetRequestDto, PasswordResetDto } from './dto/password-reset.dto';
 export declare class AuthController {
     private authService;
     constructor(authService: AuthService);
@@ -28,6 +29,8 @@ export declare class AuthController {
         role: "Mechanic" | "Customer" | "Advisor" | "Admin";
         id: number;
         fullName: string;
+        resetToken: string;
+        resetTokenExpires: Date;
         createdAt: Date;
         updatedAt: Date;
     }>;
@@ -36,7 +39,15 @@ export declare class AuthController {
         role: "Mechanic" | "Customer" | "Advisor" | "Admin";
         id: number;
         fullName: string;
+        resetToken: string;
+        resetTokenExpires: Date;
         createdAt: Date;
         updatedAt: Date;
+    }>;
+    requestPasswordReset(dto: PasswordResetRequestDto): Promise<{
+        message: string;
+    }>;
+    resetPassword(dto: PasswordResetDto): Promise<{
+        message: string;
     }>;
 }

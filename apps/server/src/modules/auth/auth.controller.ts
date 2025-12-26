@@ -5,6 +5,7 @@ import { RegisterDto, RegisterSchema } from './dto/register.dto';
 import { ZodValidationPipe } from '../../common/pipes/zod-validation.pipe';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { UpdateProfileDto, UpdateProfileSchema } from './dto/update-profile.dto';
+import { PasswordResetRequestDto, PasswordResetRequestSchema, PasswordResetDto, PasswordResetSchema } from './dto/password-reset.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -36,5 +37,17 @@ export class AuthController {
     @UsePipes(new ZodValidationPipe(UpdateProfileSchema))
     async updateProfile(@Req() req: any, @Body() updateDto: UpdateProfileDto) {
         return this.authService.updateProfile(req.user.userId, updateDto);
+    }
+
+    @Post('password-reset/request')
+    @UsePipes(new ZodValidationPipe(PasswordResetRequestSchema))
+    async requestPasswordReset(@Body() dto: PasswordResetRequestDto) {
+        return this.authService.requestPasswordReset(dto);
+    }
+
+    @Post('password-reset/reset')
+    @UsePipes(new ZodValidationPipe(PasswordResetSchema))
+    async resetPassword(@Body() dto: PasswordResetDto) {
+        return this.authService.resetPassword(dto);
     }
 }

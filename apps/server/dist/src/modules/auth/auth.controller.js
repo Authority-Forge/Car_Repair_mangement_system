@@ -20,6 +20,7 @@ const register_dto_1 = require("./dto/register.dto");
 const zod_validation_pipe_1 = require("../../common/pipes/zod-validation.pipe");
 const jwt_auth_guard_1 = require("./guards/jwt-auth.guard");
 const update_profile_dto_1 = require("./dto/update-profile.dto");
+const password_reset_dto_1 = require("./dto/password-reset.dto");
 let AuthController = class AuthController {
     constructor(authService) {
         this.authService = authService;
@@ -35,6 +36,12 @@ let AuthController = class AuthController {
     }
     async updateProfile(req, updateDto) {
         return this.authService.updateProfile(req.user.userId, updateDto);
+    }
+    async requestPasswordReset(dto) {
+        return this.authService.requestPasswordReset(dto);
+    }
+    async resetPassword(dto) {
+        return this.authService.resetPassword(dto);
     }
 };
 exports.AuthController = AuthController;
@@ -72,6 +79,22 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "updateProfile", null);
+__decorate([
+    (0, common_1.Post)('password-reset/request'),
+    (0, common_1.UsePipes)(new zod_validation_pipe_1.ZodValidationPipe(password_reset_dto_1.PasswordResetRequestSchema)),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "requestPasswordReset", null);
+__decorate([
+    (0, common_1.Post)('password-reset/reset'),
+    (0, common_1.UsePipes)(new zod_validation_pipe_1.ZodValidationPipe(password_reset_dto_1.PasswordResetSchema)),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "resetPassword", null);
 exports.AuthController = AuthController = __decorate([
     (0, common_1.Controller)('auth'),
     __metadata("design:paramtypes", [auth_service_1.AuthService])

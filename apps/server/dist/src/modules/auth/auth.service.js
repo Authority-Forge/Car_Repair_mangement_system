@@ -49,6 +49,7 @@ exports.AuthService = void 0;
 const common_1 = require("@nestjs/common");
 const jwt_1 = require("@nestjs/jwt");
 const bcrypt = __importStar(require("bcrypt"));
+const crypto = __importStar(require("crypto"));
 const database_module_1 = require("../../database/database.module");
 const schema = __importStar(require("../../database/schema"));
 const drizzle_orm_1 = require("drizzle-orm");
@@ -113,6 +114,38 @@ let AuthService = class AuthService {
         }
         const { passwordHash, ...result } = updatedUser;
         return result;
+    }
+    async requestPasswordReset(dto) {
+        const user = await this.db.query.users.findFirst({
+            where: (0, drizzle_orm_1.eq)(schema.users.email, dto.email)
+        });
+        if (user) {
+            const token = crypto.randomBytes(32).toString('hex');
+            const expires = new Date();
+            expires.setHours(expires.getHours() + 1);
+            await this.db.update(schema.users)
+                .set({ resetToken: token, resetTokenExpires: expires })
+                .where((0, drizzle_orm_1.eq)(schema.users.id, user.id));
+            console.log(`[PASSWORD RESET] Token for ${user.email}: ${token}`);
+        }
+        return { message: 'If this email exists in our records, a reset link has been sent.' };
+    }
+    async resetPassword(dto) {
+        const user = await this.db.query.users.findFirst({
+            where: (0, drizzle_orm_1.and)((0, drizzle_orm_1.eq)(schema.users.resetToken, dto.token), (0, drizzle_orm_1.gt)(schema.users.resetTokenExpires, new Date()))
+        });
+        if (!user) {
+            throw new common_1.UnauthorizedException('Invalid or expired token');
+        }
+        const hashedPassword = await bcrypt.hash(dto.password, 10);
+        await this.db.update(schema.users)
+            .set({
+            passwordHash: hashedPassword,
+            resetToken: null,
+            resetTokenExpires: null
+        })
+            .where((0, drizzle_orm_1.eq)(schema.users.id, user.id));
+        return { message: 'Password has been reset successfully.' };
     }
     generateToken(user) {
         const payload = { email: user.email, sub: user.id, role: user.role };

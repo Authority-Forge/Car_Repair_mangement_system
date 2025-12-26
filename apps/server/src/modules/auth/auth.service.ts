@@ -3,10 +3,12 @@ import { JwtService } from '@nestjs/jwt';
 import { LoginDto, LoginSchema } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 import * as bcrypt from 'bcrypt';
+import * as crypto from 'crypto';
 import { DRIZZLE } from '../../database/database.module';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import * as schema from '../../database/schema';
-import { eq } from 'drizzle-orm';
+import { eq, and, gt } from 'drizzle-orm';
+import { PasswordResetRequestDto, PasswordResetDto } from './dto/password-reset.dto';
 
 @Injectable()
 export class AuthService {
@@ -87,6 +89,53 @@ export class AuthService {
 
         const { passwordHash, ...result } = updatedUser;
         return result;
+    }
+
+    async requestPasswordReset(dto: PasswordResetRequestDto) {
+        const user = await this.db.query.users.findFirst({
+            where: eq(schema.users.email, dto.email)
+        });
+
+        // Always return success message to prevent enumeration
+        if (user) {
+            const token = crypto.randomBytes(32).toString('hex');
+            const expires = new Date();
+            expires.setHours(expires.getHours() + 1); // 1 hour expiry
+
+            await this.db.update(schema.users)
+                .set({ resetToken: token, resetTokenExpires: expires })
+                .where(eq(schema.users.id, user.id));
+
+            // In a real app, send email here. For MVP, we log or user mock.
+            console.log(`[PASSWORD RESET] Token for ${user.email}: ${token}`);
+        }
+
+        return { message: 'If this email exists in our records, a reset link has been sent.' };
+    }
+
+    async resetPassword(dto: PasswordResetDto) {
+        const user = await this.db.query.users.findFirst({
+            where: and(
+                eq(schema.users.resetToken, dto.token),
+                gt(schema.users.resetTokenExpires, new Date())
+            )
+        });
+
+        if (!user) {
+            throw new UnauthorizedException('Invalid or expired token');
+        }
+
+        const hashedPassword = await bcrypt.hash(dto.password, 10);
+
+        await this.db.update(schema.users)
+            .set({
+                passwordHash: hashedPassword,
+                resetToken: null,
+                resetTokenExpires: null
+            })
+            .where(eq(schema.users.id, user.id));
+
+        return { message: 'Password has been reset successfully.' };
     }
 
     private generateToken(user: any) {

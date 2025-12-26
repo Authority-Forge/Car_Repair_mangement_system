@@ -1257,7 +1257,7 @@
       "Assert UI updates (text/color/visibility)",
       "Verify Zod client-side validation triggers"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-091",
@@ -1271,7 +1271,7 @@
       "Assert UI updates (text/color/visibility)",
       "Verify Zod client-side validation triggers"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-092",
@@ -1285,7 +1285,7 @@
       "Assert UI updates (text/color/visibility)",
       "Verify Zod client-side validation triggers"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-093",
@@ -1299,7 +1299,7 @@
       "Verify persistence across screens",
       "Check final state in UI"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-094",
@@ -1313,7 +1313,7 @@
       "Verify persistence across screens",
       "Check final state in UI"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-095",
@@ -1327,7 +1327,7 @@
       "Verify persistence across screens",
       "Check final state in UI"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-096",
@@ -1341,7 +1341,7 @@
       "Verify persistence across screens",
       "Check final state in UI"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-097",
@@ -1355,7 +1355,7 @@
       "Assert 403/401 or clean output",
       "Check logs for security alert (optional)"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-098",
@@ -1369,7 +1369,7 @@
       "Assert 403/401 or clean output",
       "Check logs for security alert (optional)"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-099",
@@ -1383,7 +1383,7 @@
       "Assert 403/401 or clean output",
       "Check logs for security alert (optional)"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "AUTH-100",
@@ -1397,7 +1397,7 @@
       "Assert 403/401 or clean output",
       "Check logs for security alert (optional)"
     ],
-    "passes": false
+    "passes": true
   },
   {
     "id": "MECH-101",
